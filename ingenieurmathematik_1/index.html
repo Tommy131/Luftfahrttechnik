@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程首页</title>
+    <link rel="stylesheet" href="../assets/css/course.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 顶部导航栏 -->
+        <header>
+            <div class="container">
+                <h1 id="course-title">课程标题</h1>
+                <nav>
+                    <a href="../index.html">返回主页</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main>
+            <section class="content">
+                <div class="container">
+                    <h2>课程章节</h2>
+
+                    <!-- 章节笔记列表 -->
+                    <ul id="chapter-list" class="chapter-list">
+                        <!-- 章节数据通过 JS 动态插入 -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 我的学习博客</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 嵌入课程数据，避免 fetch 请求 -->
+    <script id="course-data" type="application/json">
+    {
+        "courseTitle": "Ingenieurmathematik I",
+        "articles": [
+            {
+                "title": "第1章: 线性代数基础",
+                "author": "赵六",
+                "date": "2024-09-10",
+                "category": "基础",
+                "description": "讲解向量、矩阵的基础知识及其应用。",
+                "url": "#"
+            },
+            {
+                "title": "第2章: 微积分初步",
+                "author": "李四",
+                "date": "2024-09-18",
+                "category": "基础",
+                "description": "介绍微分与积分的基础概念。",
+                "url": "#"
+            },
+            {
+                "title": "第3章: 微分方程",
+                "author": "张三",
+                "date": "2024-09-30",
+                "category": "进阶",
+                "description": "深入探讨微分方程在工程中的应用。",
+                "url": "#"
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- JavaScript 脚本 -->
+    <script src="../assets/js/course.js"></script>
+</body>
+</html>
