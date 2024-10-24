@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let articles = [];
 
         course.articles.forEach(article => {
+            article["url"] = tagName + "/" + article["url"];
             article["course"] = course.courseTitle;
             articles.push(article);
         });
