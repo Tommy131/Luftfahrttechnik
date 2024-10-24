@@ -18,7 +18,17 @@ const courseData = {
     },
     "ingenieurmathematik_1": {
         "courseTitle": "Ingenieurmathematik I",
-        "articles": []
+        "articles": [
+            {
+                "id": "mathe-001",
+                "title": "Einführung: Videos für Selbstlernen",
+                "author": "Jay",
+                "date": "24.10.2024",
+                "category": "Einführung",
+                "description": "Videos von YouTube: MathebyDanielJung",
+                "url": "einfuehrung.html"
+            },
+        ]
     },
     "werkstofftechnik_1": {
         "courseTitle": "Werkstofftechnik I",

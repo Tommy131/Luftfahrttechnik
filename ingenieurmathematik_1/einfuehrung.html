@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einführung: Selbstlernen - Ingenieurmathematik I - HanskiJay's Study Blog</title>
+    <link rel="stylesheet" href="../assets/css/course.css">
+    <link rel="stylesheet" href="../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Einführung: Selbstlernen</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+        <main>
+            <section class="content">
+                <h2>Viel Erfolg :)</h2>
+                <p class="none">Hier sind paar Videos von Daniel Jung.</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=Uq6661KAkYM&list=PLLTAHuUj-zHjXR9oXwqfAyM78v5IaoS6n&index=2&ab_channel=MathebyDanielJung" target="_blank">Aussagelogik</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLLTAHuUj-zHhaqlUM4wPXUGo1isfECVb1" target="_blank">Relation -> Funktion</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLLTAHuUj-zHhJSdV8hqWaydgOWjF-fYK0" target="_blank">Differenzialgleichungen</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=CamVNjwj2zA" target="_blank">Äquivalenzumformung</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=E8gItS9vGKg" target="_blank">Äquivalenzrelation</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=vrh1y9bwhls&list=PLLTAHuUj-zHgrxnm5NRR_vXH-pJ9ZrrvD&pp=iAQB" target="_blank">Gruppen, Ringe, Körper</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=mYf8ECLaPt8" target="_blank">Zahlen (Basis)</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Pcnb-IkkrXM" target="_blank">Intervallschachtelungsprinzip</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=bOeN4FV6lJs&list=PLLTAHuUj-zHgrAfietLRb01pO1mtji8qn&pp=iAQB" target="_blank">Komplexe Zahlen</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/course_data.js"></script>
+    <script>
+        const article = getArticleById("mathe-001");
+
+        const articleInfo = document.getElementById("article-info");
+
+        articleInfo.innerHTML = `
+            <div class="meta-data">
+                <span>Author: ${article.author}</span>
+                <span>Last Update: ${article.date}</span>
+                <span>Category: ${article.category}</span>
+            </div>
+        `;
+
+        function closeAlert() {
+            var alertBox = document.getElementById("alertBox");
+            alertBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>

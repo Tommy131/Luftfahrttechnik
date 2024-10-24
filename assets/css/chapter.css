@@ -19,7 +19,11 @@
     line-height: 1.6;
     font-size: 1.1em;
 }
+.content p.none {
+    margin-left: 0;
+}
 .content ul {
+    margin-top: 10px;
     margin-left: 20px;
 }
 .content ul.h2 {
