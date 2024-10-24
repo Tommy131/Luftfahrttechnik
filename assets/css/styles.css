@@ -34,10 +34,6 @@ a::after {
     min-height: 100vh; /* 占满整个视口高度 */
 }
 
-main {
-    flex: 1; /* 使 main 区域占据剩余的空间 */
-}
-
 /* 顶部导航栏 */
 header {
     background-color: #007acc;
@@ -62,7 +58,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    padding: 0 10px;
 }
 
 nav ul li a {
@@ -75,7 +71,19 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+main {
+    flex: 1; /* 使 main 区域占据剩余的空间 */
+}
+
 /* 主内容区 */
+.github-issue-page {
+    color: #0099ff;
+}
+
+.container {
+    margin: auto 20px;
+}
+
 .hero {
     background-color: #e0f7fa;
     padding: 60px 0;
@@ -104,9 +112,12 @@ nav ul li a:hover {
     background-color: #005fa3;
 }
 
+.section-title {
+    margin: auto 20px;
+}
+
 /* 科目卡片布局 */
 .subjects {
-    margin: auto 20px;
     padding: 40px 0;
     background-color: #f4f4f4;
 }
@@ -135,6 +146,55 @@ nav ul li a:hover {
     color: #666;
 }
 
+/* 文章发布展示布局 */
+.latest-articles-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.article-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article h3 a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+}
+
+.article h3 a:hover {
+    text-decoration: underline;
+}
+
+.article p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* 章节的元数据布局 */
+.meta-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.meta-data span {
+    margin-right: 15px;
+}
+
+
 /* 页脚 */
 footer {
     background-color: #333;
@@ -162,6 +222,11 @@ footer a:hover {
 }
 
 @media (max-width: 767px) {
+    header .logo {
+        height: 5.5vh;
+        text-align: center;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -177,5 +242,13 @@ footer a:hover {
 
     .subjects .container {
         display: block;
+    }
+
+    .meta-data {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+        color: #777;
+        align-items: flex-start;
     }
 }

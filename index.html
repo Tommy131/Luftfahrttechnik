@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luftfahrttechnik 学习博客</title>
+    <title>HanskiJay's Study Blog</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <div class="wrapper">
-        <!-- 顶部导航栏 -->
         <header>
             <div class="container">
-                <h1 class="logo">我的学习博客</h1>
+                <h1 class="logo">HanskiJay's Study Blog</h1>
                 <nav>
                     <ul>
                         <li><a href="thermodynamik_1/index.html">Thermodynamik I</a></li>
@@ -25,51 +24,63 @@
             </div>
         </header>
 
-        <!-- 主内容区 -->
         <main>
             <section class="hero">
                 <div class="container">
-                    <h2>欢迎来到 Luftfahrttechnik 学习博客</h2>
-                    <p>这里记录了我在学习过程中各门课程的笔记与心得。</p>
+                    <h2>Willkommen bei einem Lernblog über die Fakultät Luftfahrttechnik.</h2>
+                    <p>Dieser Blog wurde am <b>24.10.2024</b> gegründet. Hier zeichnet meine Notizen und Erfahrungen zu jede Vorlesung während des Studienprozesses auf.</p>
+                    <p>Dieser Blog gilt für die Studenten/-innen, wer die <b>1. Semester an der THI (Technische Hochschule Ingolstadt)</b> studiert.</p>
+                    <p>Wenn Sie Fragen haben oder Fehler melden, gehen Sie bitte zur <a class="github-issue-page" href="https://github.com/Tommy131/tommy131.github.io/issues"><b>GitHub-Issue-Seite.</b></a></p>
                 </div>
             </section>
 
             <section id="subjects" class="subjects">
+                <h2 class="section-title">Modulen</h2>
                 <div class="container">
                     <div class="subject-card" id="thermodynamik_1">
                         <h3><a href="thermodynamik_1/index.html">Thermodynamik I</a></h3>
-                        <p>了解热力学的基础概念和应用。</p>
+                        <p>Grundlegende Konzepte und Anwendungen der Thermodynamik verstehen.</p>
                     </div>
                     <div class="subject-card" id="statik">
                         <h3><a href="statik/index.html">Statik</a></h3>
-                        <p>学习力学和结构分析的基本原理。</p>
+                        <p>Grundprinzipien der Mechanik und Strukturanalyse erlernen.</p>
                     </div>
                     <div class="subject-card" id="konstruktion">
                         <h3><a href="konstruktion/index.html">Konstruktion</a></h3>
-                        <p>掌握设计和构建的基本技能。</p>
+                        <p>Grundlegende Fähigkeiten im Design und Bau beherrschen.</p>
                     </div>
                     <div class="subject-card" id="ingenieurinformatik">
                         <h3><a href="ingenieurinformatik/index.html">Ingenieurinformatik</a></h3>
-                        <p>编程与工程中的信息技术。</p>
+                        <p>Programmierung und Informationstechnologie im Ingenieurwesen.</p>
                     </div>
                     <div class="subject-card" id="ingenieurmathematik_1">
                         <h3><a href="ingenieurmathematik_1/index.html">Ingenieurmathematik I</a></h3>
-                        <p>工程数学基础与应用。</p>
+                        <p>Grundlagen und Anwendungen der Ingenieurmathematik.</p>
                     </div>
                     <div class="subject-card" id="werkstofftechnik_1">
                         <h3><a href="werkstofftechnik_1/index.html">Werkstofftechnik I</a></h3>
-                        <p>材料科学基础与实践。</p>
+                        <p>Grundlagen und Praxis der Materialwissenschaft.</p>
                     </div>
                 </div>
             </section>
+
+            <section id="latest-articles" class="latest-articles-section">
+                <h2 class="section-title">Neueste Artikel</h2>
+                <div class="container">
+                    <ul id="article-list" class="article-list"></ul>
+                </div>
+            </section>
+
         </main>
 
-        <!-- 页脚 -->
         <footer>
             <div class="container">
-                <p>&copy; 2024 我的学习博客 | <a href="#">隐私政策</a> | <a href="#">关于我们</a></p>
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
             </div>
         </footer>
     </div>
+
+    <script src="assets/js/course_data.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

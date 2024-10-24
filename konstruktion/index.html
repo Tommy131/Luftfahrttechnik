@@ -5,75 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>课程首页</title>
     <link rel="stylesheet" href="../assets/css/course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="wrapper">
-        <!-- 顶部导航栏 -->
         <header>
             <div class="container">
                 <h1 id="course-title">课程标题</h1>
                 <nav>
-                    <a href="../index.html">返回主页</a>
+                    <a class="history-back-button" onclick="javascript:history.back()">Zur Startseite</a>
                 </nav>
             </div>
         </header>
 
-        <!-- 主内容区 -->
         <main>
             <section class="content">
                 <div class="container">
-                    <h2>课程章节</h2>
-
-                    <!-- 章节笔记列表 -->
-                    <ul id="chapter-list" class="chapter-list">
-                        <!-- 章节数据通过 JS 动态插入 -->
-                    </ul>
+                    <h2 class="capitel-title"><i class="fas fa-book"></i> Kapitel</h2>
+                    <ul id="chapter-list" class="chapter-list"></ul>
                 </div>
             </section>
         </main>
 
-        <!-- 页脚 -->
         <footer>
             <div class="container">
-                <p>&copy; 2024 我的学习博客</p>
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
             </div>
         </footer>
     </div>
 
-    <!-- 嵌入课程数据，避免 fetch 请求 -->
-    <script id="course-data" type="application/json">
-    {
-        "courseTitle": "Konstruktion",
-        "articles": [
-            {
-                "title": "第1章: 机械设计基础",
-                "author": "王小明",
-                "date": "2024-09-25",
-                "category": "基础",
-                "description": "讲解机械设计中的基础概念与方法。",
-                "url": "#"
-            },
-            {
-                "title": "第2章: CAD 工具使用",
-                "author": "李伟",
-                "date": "2024-10-02",
-                "category": "工具使用",
-                "description": "介绍如何使用 CAD 软件进行机械设计。",
-                "url": "#"
-            },
-            {
-                "title": "第3章: 实际案例分析",
-                "author": "张志强",
-                "date": "2024-10-10",
-                "category": "进阶",
-                "description": "通过案例分析讲解机械设计中的关键步骤。",
-                "url": "#"
-            }
-        ]
-    }
-    </script>
-
-    <!-- JavaScript 脚本 -->
+    <script src="../assets/js/course_data.js"></script>
     <script src="../assets/js/course.js"></script>
 </body>
 </html>
