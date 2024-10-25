@@ -13,6 +13,16 @@ const courseData = {
                 "isCertified": false,
                 "url": "kapitel_1/index.html"
             },
+            {
+                "id": "thermo-002",
+                "title": "Kapitel 2: Energie und Entropie (Hauptsätze der Thermodynamik)",
+                "author": "Jay",
+                "date": "25.10.2024",
+                "category": "Grundlagen",
+                "description": "Hauptsätze der Thermodynamik",
+                "isCertified": false,
+                "url": "kapitel_2/index.html"
+            },
         ]
     },
     "statik": {
@@ -130,16 +140,20 @@ function closeAlert() {
     alertBox.style.display = "none";
 }
 
-let article = getArticleById(articleId);
-let articleInfo = document.getElementById("article-info");
-let isCertified = article.isCertified ? "certified" : 'not-certified';
-let isCertifiedStr = article.isCertified ? "Certified" : "Not-Certified";
+try {
+    let article = getArticleById(articleId);
+    let articleInfo = document.getElementById("article-info");
+    let isCertified = article.isCertified ? "certified" : 'not-certified';
+    let isCertifiedStr = article.isCertified ? "Certified" : "Not-Certified";
 
-articleInfo.innerHTML = `
-    <div class="meta-data">
-        <span>Author: ${article.author}</span>
-        <span>Last Update: ${article.date}</span>
-        <span>Category: ${article.category}</span>
-        Status: <span class="certification-status ${isCertified}">${isCertifiedStr}</span>
-    </div>
-`;
+    articleInfo.innerHTML = `
+        <div class="meta-data">
+            <span>Author: ${article.author}</span>
+            <span>Last Update: ${article.date}</span>
+            <span>Category: ${article.category}</span>
+            Status: <span class="certification-status ${isCertified}">${isCertifiedStr}</span>
+        </div>
+    `;
+} catch(err) {
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 1: Grundlagen der Thermodynamik</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel 1: Grundlagen der Thermodynamik)</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+                <div id="rendered-html" class="markdown-body"></div>
+            </section>
+
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: Soika Thermodynamik I 169 Kap 1v14s</h2>
+                <embed src="Soika Thermodynamik I 169 Kap 1v14s.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "thermo-002";
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // 检查 marked 函数是否存在
+            if (typeof marked === "object") {
+                fetch('Thermodynamik_I_Detaillierte_Zusammenfassung.md')
+                .then(response => response.text())
+                .then(text => {
+                        const markdownHTML = marked.parse(text);
+                        document.getElementById('rendered-html').innerHTML = markdownHTML;
+                    })
+            } else {
+                console.error("marked.js 未正确加载");
+            }
+        });
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>

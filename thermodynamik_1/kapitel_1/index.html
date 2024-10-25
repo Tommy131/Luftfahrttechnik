@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 1: Grundlagen der Thermodynamik</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel 1: Grundlagen der Thermodynamik</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+                <h2>1. Grundlagen der Thermodynamik</h2>
+
+                <h3>1.1 Was ist Thermodynamik?</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Thermodynamik</strong> ist das Studium der Energieumwandlungen
+                    zwischen Wärme, Arbeit und innerer Energie in Systemen.
+                </li>
+                <li>
+                    Wichtige Fragen:
+                    <ul class="h2">
+                    <li>"Was ist Thermodynamik?"</li>
+                    <li>"Wo sehen wir Thermodynamik?"</li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>1.2 Systeme und Systemgrenzen</h3>
+
+                <ul class="h2">
+                <li>
+                    <p>
+                    <strong>Thermodynamisches System</strong>: Eine definierte Menge an
+                    Materie oder ein Raum, der mit seiner Umgebung über
+                    <strong>Energie-</strong> und <strong>Massenströme</strong> interagiert.
+                    </p>
+
+                    <ul class="h2">
+                    <li>
+                        <strong>Offenes System</strong>: Austausch von Energie und Masse mit der
+                        Umgebung.
+                    </li>
+                    <li>
+                        <strong>Geschlossenes System</strong>: Austausch von Energie, aber nicht
+                        von Masse.
+                    </li>
+                    <li>
+                        <strong>Isoliertes System</strong>: Kein Austausch von Energie oder
+                        Masse.
+                    </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                    <strong>Systemgrenzen</strong>: Bestimmen die Grenzen eines Systems.
+                    Energie- und Massenströme können diese Grenzen abhängig von der Art des
+                    Systems überschreiten.
+                    </p>
+                </li>
+                </ul>
+
+                <h3>1.3 Beispiele für thermodynamische Systeme</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Einfaches Maschinensystem</strong>: Ein Haartrockner als
+                    thermodynamisches System, das <strong>Masse</strong> und
+                    <strong>Energie</strong> (Wärmeübertragung, Kompression usw.) austauscht.
+                </li>
+                <li>
+                    <strong>Komplexes Maschinensystem</strong>: <strong>Gasturbinen</strong> wie
+                    Rolls-Royce Trent 700 zeigen komplexe Energieumwandlungen.
+                </li>
+                </ul>
+
+                <h2>2. Energie und Entropie</h2>
+
+                <h3>2.1 Erster Hauptsatz der Thermodynamik</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Energieerhaltung</strong>: Die Gesamtenergie eines abgeschlossenen
+                    Systems bleibt konstant.
+                    <ul class="h2">
+                    <li>
+                        <strong>Energie</strong> kann weder erzeugt noch zerstört werden,
+                        sondern nur zwischen verschiedenen Formen umgewandelt werden (z.B. von
+                        <strong>Wärme</strong> in <strong>mechanische Energie</strong>).
+                    </li>
+                    <li>
+                        <strong>Mathematische Form</strong>: <code>dU = dQ - dW</code> (Änderung
+                        der inneren Energie = zugeführte Wärme - geleistete Arbeit).
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>2.2 Energieformen</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Innere Energie (U)</strong>: Summe aller mikroskopischen Energien
+                    (kinetische + potenzielle Energie).
+                </li>
+                <li>
+                    <strong>Arbeit (W)</strong>: Mechanische Energie, die dem System zugeführt
+                    oder entnommen wird.
+                </li>
+                <li>
+                    <strong>Wärme (Q)</strong>: Energie, die aufgrund eines
+                    Temperaturunterschieds übertragen wird.
+                </li>
+                </ul>
+
+                <h3>2.3 Zweiter Hauptsatz der Thermodynamik</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Entropie (S)</strong>: Ein Maß für die Unordnung in einem System.
+                    <ul class="h2">
+                    <li>
+                        <strong>Entropie</strong> nimmt in allen natürlichen Prozessen zu, was
+                        zu einem <strong>Qualitätsverlust der Energie</strong> führt.
+                    </li>
+                    <li>
+                        <strong>Mathematische Form</strong>:
+                        <code>dS ≥ dQ/T</code> (Entropieänderung für reversible Prozesse).
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2>3. Zustandsänderungen von Modellfluiden</h2>
+
+                <h3>3.1 Kalorische Zustandsgleichungen von Modellfluiden</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Ideale Gasgleichung</strong>: <code>pV = nRT</code> (Beziehung
+                    zwischen Druck, Volumen und Temperatur für ein ideales Gas).
+                </li>
+                </ul>
+
+                <h3>3.2 Zustandsänderungen für ideale Gase</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Isothermer Prozess</strong>: Konstante Temperatur, das Gas dehnt
+                    sich aus oder wird komprimiert, und es gilt <code>pV = konstant</code>.
+                </li>
+                <li>
+                    <strong>Isobarer Prozess</strong>: Konstanter Druck, Volumen und Temperatur
+                    ändern sich.
+                </li>
+                <li>
+                    <strong>Isochorer Prozess</strong>: Konstantes Volumen, Druck und Temperatur
+                    ändern sich.
+                </li>
+                </ul>
+
+                <h3>3.3 Wichtige Einzelprozesse von Modellfluiden</h3>
+
+                <ul class="h2">
+                <li>
+                    Verschiedene Prozesse wie <strong>isotherme</strong>,
+                    <strong>isobare</strong> und
+                    <strong>isochore Zustandsänderungen</strong> sind wichtig, um das Verhalten
+                    von Modellfluiden (ideale Gase, inkompressible Flüssigkeiten) unter
+                    verschiedenen Bedingungen zu verstehen.
+                </li>
+                </ul>
+
+                <h2>4. Rechtsläufige Kreisprozesse mit perfektem Gas</h2>
+
+                <h3>4.1 Carnot-Kreisprozess</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Carnot-Prozess</strong>: Ein theoretischer thermodynamischer
+                    Kreisprozess, der die maximale Effizienz eines Wärmekraftwerks bietet.
+                    <ul class="h2">
+                    <li>
+                        Besteht aus zwei <strong>isothermen</strong> und zwei
+                        <strong>adiabatischen Prozessen</strong> (keine Wärmeübertragung).
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>4.2 Wirkungsgrad von Kreisprozessen</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Wirkungsgrad (η)</strong>: Das Verhältnis der nutzbaren Arbeit zur
+                    zugeführten Wärmeenergie, <code>η = W/Q</code>.
+                    <ul class="h2">
+                    <li>
+                        Der Carnot-Wirkungsgrad stellt die
+                        <strong>theoretische Obergrenze</strong> für Effizienz dar.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2>5. Kreisprozesse mit reinen Fluiden</h2>
+
+                <h3>5.1 Thermodynamik eines reinen Fluids</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Reine Stoffe</strong>: Stoffe, die in verschiedenen Phasen (fest,
+                    flüssig, gasförmig) existieren und spezifischen thermodynamischen Gesetzen
+                    folgen.
+                    <ul class="h2">
+                    <li>
+                        Beispiel: <strong>Wasser</strong>, das zwischen Flüssigkeits- und
+                        Dampffase wechselt.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>5.2 Rechtsläufige Kreisprozesse mit reinem Fluid</h3>
+
+                <ul class="h2">
+                <li>
+                    Prozesse, die den <strong>Wärme- und Arbeitsaustausch</strong> in Systemen
+                    mit reinen Stoffen beschreiben, insbesondere bei
+                    <strong>Kraftwerksprozessen</strong> und <strong>Kältekreisläufen</strong>.
+                </li>
+                </ul>
+
+                <h2>6. System und Zustandsbeschreibung</h2>
+
+                <h3>6.1 Thermodynamische Systeme und Zustandsgrößen</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Zustandsgrößen</strong>: Eigenschaften wie Druck (p), Temperatur (T)
+                    und Volumen (V), die den Zustand eines Systems beschreiben.
+                </li>
+                <li>
+                    <strong>Zustandsgleichungen</strong>: Mathematische Beziehungen zwischen den
+                    Zustandsgrößen (z.B. die ideale Gasgleichung).
+                </li>
+                </ul>
+
+                <h3>6.2 Thermodynamisches Gleichgewicht</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Thermodynamisches Gleichgewicht</strong> liegt vor, wenn die
+                    Zustandsgrößen eines Systems sich nicht mehr mit der Zeit ändern.
+                    <ul class="h2">
+                    <li>
+                        <strong>Thermisches Gleichgewicht</strong>: Einheitliche Temperatur.
+                    </li>
+                    <li>
+                        <strong>Mechanisches Gleichgewicht</strong>: Keine Druckdifferenzen.
+                    </li>
+                    <li>
+                        <strong>Chemisches Gleichgewicht</strong>: Keine laufenden chemischen
+                        Reaktionen.
+                    </li>
+                    <li>
+                        <strong>Phasengleichgewicht</strong>: Keine Phasenänderungen (z.B.
+                        Verdampfen oder Kondensation).
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>6.3 Bilanzgleichungen</h3>
+
+                <ul class="h2">
+                <li>
+                    Die <strong>Bilanzierung von Masse, Energie und Entropie</strong> an den
+                    Systemgrenzen ist grundlegend für die Analyse thermodynamischer Prozesse.
+                    <ul class="h2">
+                    <li>
+                        <strong>Energiebilanz</strong>: Gesamtenergie rein = Gesamtenergie raus.
+                    </li>
+                    <li>
+                        <strong>Massenbilanz</strong>: Gesamtmasse rein = Gesamtmasse raus.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2>7. Reale Gase und Modellfluide</h2>
+
+                <h3>7.1 Verhalten realer Gase</h3>
+
+                <ul class="h2">
+                <li>
+                    Reale Gase weichen bei hohen Drücken oder niedrigen Temperaturen vom idealen
+                    Verhalten ab. Korrekturen wie die
+                    <strong>van der Waals-Gleichung</strong> sind erforderlich.
+                    <ul class="h2">
+                    <li>
+                        Berücksichtigt das Eigenvolumen der Gasteilchen und die Wechselwirkungen
+                        zwischen ihnen.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>7.2 Modellfluide</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Inkompressible Flüssigkeiten</strong>: Dichte bleibt nahezu konstant
+                    (z.B. Wasser).
+                </li>
+                <li>
+                    <strong>Ideale Gase</strong>: Befolgen die ideale Gasgleichung ohne
+                    Wechselwirkungen zwischen den Molekülen.
+                </li>
+                </ul>
+
+                <h2>8. Prozesse und Zustandsänderungen</h2>
+
+                <h3>8.1 Prozess vs. Zustandsänderung</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Zustandsänderung</strong>: Übergang eines Systems von einem Zustand
+                    in einen anderen, gekennzeichnet durch Änderungen der Zustandsgrößen wie
+                    Druck, Volumen und Temperatur.
+                </li>
+                <li>
+                    <strong>Prozess</strong>: Der technische Ablauf oder Weg, der zur
+                    Zustandsänderung führt, z.B. ein isothermer oder adiabatischer Prozess.
+                </li>
+                </ul>
+
+                <h3>8.2 Quasistatische Prozesse</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Quasistatischer Prozess</strong>: Ein Prozess, der so langsam
+                    abläuft, dass das System jederzeit im <strong>Gleichgewicht</strong> bleibt.
+                </li>
+                </ul>
+
+                <h3>8.3 Reversibilität und Irreversibilität</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Reversibler Prozess</strong>: Ein idealisierter Prozess, bei dem das
+                    System und die Umgebung ohne Veränderungen in ihren ursprünglichen Zustand
+                    zurückkehren können.
+                </li>
+                <li>
+                    <strong>Irreversibler Prozess</strong>: Ein realer Prozess, bei dem
+                    Energieverluste (z.B. durch Reibung oder Wärme) auftreten.
+                </li>
+                </ul>
+
+                <h2>9. Mathematische Werkzeuge der Thermodynamik</h2>
+
+                <h3>9.1 Partielle Differentiation und Zustandsfunktionen</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Zustandsfunktionen</strong>: Eigenschaften eines Systems, die nur
+                    vom aktuellen Zustand abhängen (z.B. innere Energie, Enthalpie), nicht aber
+                    vom Weg, auf dem dieser Zustand erreicht wurde.
+                </li>
+                <li>
+                    <strong>Prozessgrößen</strong>: Hängen vom Weg des Prozesses ab (z.B.
+                    Arbeit, Wärme).
+                </li>
+                </ul>
+
+                <h3>9.2 Totale Differenziale</h3>
+
+                <ul class="h2">
+                <li>
+                    Verwendet zur Berechnung von Änderungen der Zustandsgrößen in Bezug auf
+                    andere Variablen.
+                </li>
+                </ul>
+
+                <h3>9.3 Beispielaufgaben</h3>
+
+                <ul class="h2">
+                <li>
+                    Das Dokument enthält Beispielaufgaben, bei denen diese Prinzipien angewendet
+                    werden:
+                    <ul class="h2">
+                    <li>
+                        Beispiel: Berechnung der <strong>Sauerstoffdichte</strong> in einer
+                        Tauchflasche unter Verwendung der idealen Gasgleichung sowie Bestimmung
+                        der Masse- und Volumenänderungen während des Tauchgangs.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2>10. Praktische Anwendungen und Beispiele</h2>
+
+                <h3>10.1 Systembeispiel: Kombikraftwerk</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Kombikraftwerk</strong>: Ein Beispiel für eine
+                    <strong>Energiebilanz</strong>, bei dem Gas- und Dampfturbinen zur Strom-
+                    und Wärmeerzeugung kombiniert werden.
+                    <ul class="h2">
+                    <li>
+                        <strong>Berechnung des Wirkungsgrades</strong> und Analyse der
+                        Energieflüsse werden behandelt.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>10.2 Systembeispiel: Wärmetauscher zur Zellenkühlung</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Beispiel eines Kühlsystems</strong>: Energieübertragung und
+                    Systemgrenzen werden definiert, um die erforderliche Kühlleistung zu
+                    berechnen.
+                </li>
+                </ul>
+
+                <h3>10.3 Berechnungsbeispiel: Dampfturbine</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Dampfturbine</strong>: Systemgrenzen werden festgelegt, um die
+                    mechanische <strong>Leistungsabgabe</strong> und die thermische Belastung
+                    der Materialien zu berechnen.
+                </li>
+                </ul>
+
+                <h3>10.4 Aufgabenbeispiele: Anwendungen idealer und realer Gase</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Aufgabe 1</strong>: Sauerstoff in einer Tauchflasche — Verwenden Sie
+                    die ideale Gasgleichung zur Berechnung der Gas-Eigenschaften vor und nach
+                    der Sauerstoffentnahme.
+                </li>
+                <li>
+                    <strong>Aufgabe 2</strong>: Bewertung thermodynamischer Systeme wie
+                    Heizkörper, Thermosflaschen und Pumpen basierend auf ihren
+                    <strong>Masse-, Energie- und Arbeitsübertragungen</strong>.
+                </li>
+                </ul>
+
+                <h2>Fazit</h2>
+
+                <p>
+                Das erste Kapitel bietet eine umfassende Einführung in die Grundlagen der
+                Thermodynamik und behandelt sowohl theoretische Prinzipien als auch praktische
+                Anwendungen. Es betont die Bedeutung des Verständnisses von
+                <strong>Systemgrenzen</strong>, <strong>Energieerhaltung</strong>,
+                <strong>Zustandsgrößen</strong> und das Verhalten von
+                <strong>Modellfluiden</strong> (ideale Gase und inkompressible Flüssigkeiten).
+                Mathematische Werkzeuge wie partielle Differentiation werden eingeführt, um
+                Zustandsänderungen und Prozesse zu analysieren.
+                </p>
+
+            </section>
+
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: Soika Thermodynamik I</h2>
+                <embed src="Soika Thermodynamik I 169 Kap 1v14s-2.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "thermo-001";
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>

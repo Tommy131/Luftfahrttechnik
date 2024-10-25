@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 1: Grundlagen der Thermodynamik</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel 1: Grundlagen der Thermodynamik</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+                <h2>Einführung in die Thermodynamik</h2>
+                <p>Die Thermodynamik befasst sich mit der Umwandlung von Energie und den damit verbundenen Zustandsänderungen in einem System. Sie untersucht, wie Energie als Wärme oder Arbeit zwischen Systemen und ihrer Umgebung übertragen wird.</p>
+
+                <h2>System und Zustand</h2>
+                <p>Thermodynamische Systeme sind definierte Bereiche, in denen Zustandsänderungen und Energieaustausche untersucht werden. Systeme werden durch <span class="highlight">Systemgrenzen</span> von ihrer Umgebung abgegrenzt. Diese Grenzen definieren, wie das System mit der Umgebung in Wechselwirkung tritt.</p>
+                <ul class="h2">
+                    <li><span class="highlight">Offenes System</span>: Austausch von Masse und Energie möglich (z.B. eine Turbine).</li>
+                    <li><span class="highlight">Geschlossenes System</span>: Austausch von Energie, aber nicht von Masse (z.B. ein Druckbehälter).</li>
+                    <li><span class="highlight">Isoliertes System</span>: Kein Austausch von Masse oder Energie (z.B. eine Thermoskanne).</li>
+                </ul>
+
+                <h2>Zustandsgrößen eines Systems</h2>
+                <p>Zustandsgrößen beschreiben den momentanen Zustand eines Systems:</p>
+                <ul class="h2">
+                    <li><span class="highlight">Intensive Zustandsgrößen</span> sind unabhängig von der Größe des Systems (z.B. Temperatur, Druck).</li>
+                    <li><span class="highlight">Extensive Zustandsgrößen</span> sind abhängig von der Systemgröße (z.B. Volumen, Masse).</li>
+                    <li><span class="highlight">Spezifische Zustandsgrößen</span> sind extensive Größen, die auf die Masse des Systems bezogen werden (z.B. spezifisches Volumen).</li>
+                </ul>
+
+                <h2>Thermodynamisches Gleichgewicht</h2>
+                <p>Ein System befindet sich im thermodynamischen Gleichgewicht, wenn keine Zustandsänderungen mehr auftreten und keine Nettotransfers von Energie oder Masse stattfinden.</p>
+                <ul class="h2">
+                    <li><span class="highlight">Thermisches Gleichgewicht</span>: gleiche Temperatur im gesamten System.</li>
+                    <li><span class="highlight">Mechanisches Gleichgewicht</span>: ausgeglichener Druck.</li>
+                    <li><span class="highlight">Chemisches Gleichgewicht</span>: keine chemischen Reaktionen.</li>
+                </ul>
+
+                <h2>Prozess und Zustandsänderung</h2>
+                <p><span class="highlight">Zustandsänderung</span> bezeichnet eine Veränderung der Zustandsgrößen (z.B. Temperatur, Druck) eines Systems.</p>
+                <ul class="h2">
+                    <li><span class="highlight">Isobare</span>: Konstanter Druck, Volumen und Temperatur ändern sich.</li>
+                    <li><span class="highlight">Isochore</span>: Konstantes Volumen, Druck und Temperatur ändern sich.</li>
+                    <li><span class="highlight">Isotherme</span>: Konstante Temperatur, Druck und Volumen ändern sich.</li>
+                    <li><span class="highlight">Adiabatische</span>: Kein Wärmeaustausch, aber Arbeit kann verrichtet werden.</li>
+                </ul>
+                <p><span class="highlight">Reversible Prozesse</span>: Idealprozesse, bei denen das System ohne Verluste wieder in den Ausgangszustand zurückgeführt werden kann.</p>
+                <p><span class="highlight">Irreversible Prozesse</span>: Realprozesse, bei denen Verluste auftreten und eine Rückkehr zum Ausgangszustand nicht ohne externe Einflüsse möglich ist.</p>
+
+                <h2>Arbeit und Wärme</h2>
+                <p>Arbeit wird verrichtet, wenn sich ein System durch Volumenänderungen verändert (z.B. Expansion eines Gases).</p>
+                <p>Wärme wird übertragen, wenn Temperaturunterschiede zwischen einem System und seiner Umgebung bestehen.</p>
+                <p><span class="highlight">Erster Hauptsatz der Thermodynamik</span>: Die innere Energie eines Systems ändert sich durch die zugeführte oder abgeführte Wärme und die verrichtete Arbeit. (Energieerhaltung: \( \Delta U = Q - W \)).</p>
+
+                <h2>Zustandsgleichungen</h2>
+                <p><span class="highlight">Zustandsgleichungen</span> koppeln verschiedene Zustandsgrößen mathematisch.</p>
+                <p>Für ein ideales Gas gilt: <span class="highlight">\(p \cdot V = m \cdot R \cdot T\)</span>, wobei \(p\) der Druck, \(V\) das Volumen, \(m\) die Masse, \(R\) die spezifische Gaskonstante und \(T\) die Temperatur ist.</p>
+                <p><span class="highlight">Ideale Gase</span> verhalten sich nach dieser einfachen Gleichung, jedoch weichen reale Gase unter hohen Drücken und niedrigen Temperaturen von diesem Verhalten ab.</p>
+                <p><span class="highlight">Van-der-Waals-Gleichung</span> beschreibt reale Gase unter Berücksichtigung von Eigenvolumen der Teilchen und intermolekularen Wechselwirkungen.</p>
+
+                <h2>Quasistatische Zustandsänderungen</h2>
+                <p>Eine <span class="highlight">quasistatische Zustandsänderung</span> verläuft so langsam, dass das System sich in jedem Moment im Gleichgewicht befindet. Solche Prozesse sind theoretisch ideal und ermöglichen eine genaue Beschreibung der Zustandsänderung.</p>
+                <p><span class="highlight">Isobare Zustandsänderung</span>: Volumen ändert sich, während der Druck konstant bleibt (Erwärmung eines Gases).</p>
+                <p><span class="highlight">Isochore Zustandsänderung</span>: Druck ändert sich, während das Volumen konstant bleibt (Erwärmung in einem geschlossenen Behälter).</p>
+                <p><span class="highlight">Isotherme Zustandsänderung</span>: Volumen und Druck ändern sich, aber die Temperatur bleibt konstant (z.B. Expansion eines Gases in einem Kolben).</p>
+
+                <h2>Thermodynamische Hauptsätze</h2>
+                <p><span class="highlight">Nullter Hauptsatz</span>: Zwei Systeme befinden sich im thermischen Gleichgewicht, wenn sie die gleiche Temperatur haben.</p>
+                <p><span class="highlight">Erster Hauptsatz</span>: Die Energie eines Systems ist konstant, wenn keine Arbeit verrichtet oder Wärme zugeführt wird (Energieerhaltung).</p>
+                <p><span class="highlight">Zweiter Hauptsatz</span>: Die Entropie eines geschlossenen Systems nimmt in einem irreversiblen Prozess zu (Unordnung steigt).</p>
+
+                <h2>Reale Gase und deren Verhalten</h2>
+                <p><span class="highlight">Reale Gase</span> weichen bei hohen Drücken und niedrigen Temperaturen von der idealen Gasgleichung ab.</p>
+                <p><span class="highlight">Van-der-Waals-Gleichung</span>: Korrektur der idealen Gasgleichung durch Berücksichtigung von Eigenvolumen der Moleküle und intermolekularen Kräften.</p>
+                <p><span class="highlight">Virialentwicklung</span>: Beschreibt das Verhalten realer Gase durch Erweiterung der thermischen Zustandsgleichung mit Virialkoeffizienten.</p>
+            </section>
+
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: Soika Thermodynamik I</h2>
+                <embed src="Soika Thermodynamik I 169 Kap 1v14s-2.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "thermo-001";
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>

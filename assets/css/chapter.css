@@ -25,14 +25,17 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.content h1, .content h2, .content h3, .content h4 {
+.content h1, .content h2, .content h3, .content h4,
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
     color: #007acc;
     margin-top: 20px;
 }
-.content h3, .content h4 {
+.content h3, .content h4,
+.markdown-body h3, .markdown-body h4 {
     margin-left: 28px;
 }
-.content p {
+.content p,
+.markdown-body p {
     margin-left: 28px;
     margin-bottom: 15px;
     line-height: 1.6;
@@ -41,14 +44,16 @@
 .content p.none {
     margin-left: 0;
 }
-.content ul, .content ol {
+.content ul, .content ol,
+.markdown-body ul, .markdown-body ol {
     margin-top: 10px;
     margin-left: 20px;
 }
 .content ul.h2, .content ol.h2 {
     margin-left: 48px;
 }
-.content ul li, .content ol li {
+.content ul li, .content ol li,
+.markdown-body ul li, .markdown-body ol li {
     line-height: 1.5em
 }
 
@@ -63,7 +68,7 @@
     margin-left: 0;
 }
 
-pre {
+.example-box pre {
     background-color: #f4f4f4;
     padding: 10px;
     border-left: 3px solid #3498db;

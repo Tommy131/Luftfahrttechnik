@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 3: Algorithmen Grundlagen</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel 3: Algorithmen Grundlagen</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+                <h2>1. Algorithmen: Definition und Eigenschaften</h2>
+                <p>Ein <span class="highlight">Algorithmus</span> ist eine Schritt-für-Schritt-Anleitung zur Lösung eines Problems. Er hat folgende Eigenschaften:</p>
+                <ul class="h2">
+                    <li><strong>Endlichkeit</strong>: Der Algorithmus muss nach einer endlichen Anzahl von Schritten enden.</li>
+                    <li><strong>Eindeutigkeit</strong>: Jeder Schritt muss klar und eindeutig beschrieben sein.</li>
+                    <li><strong>Determiniertheit</strong>: Bei gleichen Eingaben muss der Algorithmus immer die gleichen Ergebnisse liefern.</li>
+                    <li><strong>Effizienz</strong>: Der Algorithmus sollte so wenig Ressourcen (Zeit, Speicher) wie möglich verbrauchen.</li>
+                    <li><strong>Allgemeinheit</strong>: Ein Algorithmus sollte für eine Klasse von Problemen anwendbar sein, nicht nur für eine spezifische Aufgabe.</li>
+                </ul>
+
+                <h2>2. Berechenbarkeit von Algorithmen</h2>
+                <p>Nicht alle Algorithmen sind berechenbar. Ein Beispiel für eine nicht berechenbare Funktion ist die Berechnung aller reellen Zahlen im Intervall [0,1]. Ein solches Problem kann auf realen Rechnern nicht gelöst werden.</p>
+
+                <h2>3. Vom Algorithmus zum Programm</h2>
+                <p>Der Übergang vom Algorithmus zum Programm umfasst mehrere Schritte:</p>
+                <ol class="h2">
+                    <li>Definieren der Eingabe und Ausgabe.</li>
+                    <li>Entwicklung einer Lösungsidee.</li>
+                    <li>Erstellen eines Programmablaufplans (PAP) oder in Pseudocode.</li>
+                    <li>Umsetzen des Algorithmus in eine Programmiersprache.</li>
+                    <li>Testen und Debugging.</li>
+                </ol>
+
+                <h2>4. Beispiel: Berechnung des größten gemeinsamen Teilers (ggT)</h2>
+                <p>Der größte gemeinsame Teiler (ggT) zweier Zahlen a und b ist die größte Zahl, durch die sowohl a als auch b teilbar sind.</p>
+
+                <div class="example-box">
+                    <h3>Algorithmus nach Euklid (klassisch, iterativ)</h3>
+                    <p>Durch wiederholtes Subtrahieren der kleineren Zahl von der größeren, bis beide Zahlen gleich sind, wird der ggT berechnet.</p>
+                    <pre>
+while a != b:
+    if a > b:
+        a = a - b
+    else:
+        b = b - a
+return a
+                    </pre>
+                </div>
+
+                <div class="example-box">
+                    <h3>Moderner euklidischer Algorithmus (mit Modulo)</h3>
+                    <p>Ein effizienterer Algorithmus verwendet die Division mit Rest (Modulo):</p>
+                    <pre>
+def ggT(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Beispiel:
+print(ggT(36, 8))  # Ausgabe: 4
+                    </pre>
+                </div>
+
+                <h2>5. Variablen und Datentypen</h2>
+                <p>Eine <span class="highlight">Variable</span> ist ein Platzhalter für Werte, die der Computer während der Programmausführung speichert und manipuliert. Ein <span class="highlight">Datentyp</span> gibt an, welche Art von Daten in einer Variable gespeichert werden können, z.B. <em>int</em> für ganze Zahlen oder <em>boolean</em> für wahr/falsch.</p>
+
+                <h2>6. Iteration und Rekursion</h2>
+                <p>Wiederholungen in einem Algorithmus können <span class="highlight">iterativ</span> oder <span class="highlight">rekursiv</span> sein:</p>
+                <ul class="h2">
+                    <li><strong>Iteration</strong>: Die Wiederholung wird durch Schleifen wie <em>for</em> oder <em>while</em> realisiert.</li>
+                    <li><strong>Rekursion</strong>: Eine Funktion ruft sich selbst auf, bis eine Abbruchbedingung erfüllt ist.</li>
+                </ul>
+
+                <div class="example-box">
+                    <h3>Beispiel: Rekursive Berechnung der Fakultät</h3>
+                    <pre>
+def fakultaet(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fakultaet(n - 1)
+
+# Beispiel:
+print(fakultaet(5))  # Ausgabe: 120
+                    </pre>
+                </div>
+
+                <h2>7. Schaltjahrberechnung</h2>
+                <p>Ein Schaltjahr folgt den folgenden Regeln:</p>
+                <ul class="h2">
+                    <li>Wenn das Jahr durch 4 teilbar ist, ist es ein Schaltjahr.</li>
+                    <li>Ausnahme: Jahre, die durch 100 teilbar sind, sind keine Schaltjahre.</li>
+                    <li>Jahre, die sowohl durch 100 als auch durch 400 teilbar sind, sind wiederum Schaltjahre.</li>
+                </ul>
+
+                <div class="example-box">
+                    <h3>Algorithmus zur Schaltjahrberechnung</h3>
+                    <pre>
+def ist_schaltjahr(jahr):
+    if jahr % 400 == 0:
+        return True
+    elif jahr % 100 == 0:
+        return False
+    elif jahr % 4 == 0:
+        return True
+    else:
+        return False
+
+# Beispiel:
+print(ist_schaltjahr(2000))  # Ausgabe: True
+print(ist_schaltjahr(1900))  # Ausgabe: False
+                    </pre>
+                </div>
+            </section>
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: 03_Algorithmen_Grundlagen.pdf</h2>
+                <embed src="03_Algorithmen_Grundlagen.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "informatik-003";
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>

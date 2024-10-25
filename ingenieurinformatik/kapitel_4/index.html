@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 1: Algorithmen in Java</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel 1: Algorithmen in Java</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+                <h2>1. Einführung: Programmiersprachen und Java</h2>
+                <p>Programmiersprachen dienen dazu, Algorithmen und Datenstrukturen in einer für den Computer verständlichen Form zu formulieren. Java ist eine der weit verbreiteten höheren Programmiersprachen der 3. Generation. Es ermöglicht die Plattformunabhängigkeit, indem es den Quellcode in plattformunabhängigen <span class="highlight">Bytecode</span> kompiliert, der auf verschiedenen Betriebssystemen ausgeführt werden kann.</p>
+
+                <h2>2. Java: Geschichte und Eigenschaften</h2>
+                <p>Java wurde 1995 von Sun Microsystems eingeführt. Es war ursprünglich für eingebettete Systeme wie Steuerungselektronik in Haushaltsgeräten gedacht. Aufgrund seiner Plattformunabhängigkeit und des objektorientierten Designs entwickelte es sich schnell zur bevorzugten Sprache für Internetanwendungen.</p>
+
+                <h3>Java Plattformunabhängigkeit</h3>
+                <p>Java-Programme werden in Bytecode kompiliert, der in jeder <strong>Java Virtual Machine (JVM)</strong> ausgeführt werden kann. Diese JVMs sind für verschiedene Betriebssysteme verfügbar, was die Ausführung des Codes auf unterschiedlichen Plattformen ermöglicht.</p>
+
+                <h2>3. Vom Ablaufplan zum Java-Programm</h2>
+                <p>Die Entwicklung eines Java-Programms durchläuft mehrere Schritte:</p>
+                <ol class="h2">
+                    <li><strong>Präzisierung der Eingaben und Ausgaben:</strong> Was sind die Eingangsdaten und welche Ergebnisse werden erwartet?</li>
+                    <li><strong>Entwicklung einer Lösungsidee:</strong> Definieren der logischen Schritte zur Lösung des Problems, meist mit Hilfe eines <strong>Programmablaufplans (PAP)</strong>.</li>
+                    <li><strong>Implementierung:</strong> Schreiben des Programms in Java.</li>
+                    <li><strong>Testen und Debugging:</strong> Überprüfen des Programms auf Fehler und Korrekturen vornehmen.</li>
+                </ol>
+
+                <h2>4. Variablen und Datentypen</h2>
+                <p>Variablen sind Platzhalter, die Werte speichern, und Datentypen definieren, welche Art von Daten in diesen Variablen gespeichert werden können. Java hat verschiedene primitive Datentypen wie <span class="highlight">int</span> (Ganzzahlen), <span class="highlight">boolean</span> (Wahr/Falsch) und <span class="highlight">double</span> (Fließkommazahlen), sowie komplexe Datentypen wie <span class="highlight">String</span>.</p>
+
+                <div class="example-box">
+                    <h3>Beispiel: Variablendeklaration in Java</h3>
+                    <pre>
+int zahl = 10;
+double pi = 3.1415;
+String name = "Java";
+                    </pre>
+                </div>
+
+                <h2>5. Funktionen und Methoden in Java</h2>
+                <p>Funktionen (in Java oft als <strong>Methoden</strong> bezeichnet) sind wichtige Bausteine in Java-Programmen. Sie führen spezifische Aufgaben aus und ermöglichen die Strukturierung des Codes. Eine Funktion kann Parameter annehmen, um mit unterschiedlichen Werten zu arbeiten, und einen Rückgabewert liefern.</p>
+
+                <h3>Methoden in Java</h3>
+                <p>Die grundlegende Syntax einer Methode in Java besteht aus folgenden Teilen:</p>
+                <ul class="h2">
+                    <li><span class="highlight">Zugriffsmodifikator</span> (z.B. <code>public</code>, <code>private</code>) legt fest, ob die Methode aus anderen Klassen aufgerufen werden kann.</li>
+                    <li><span class="highlight">Rückgabewert</span> (z.B. <code>int</code>, <code>boolean</code>, <code>void</code>) gibt den Datentyp des Rückgabewerts der Methode an.</li>
+                    <li><span class="highlight">Methodenname</span> ist der Name, mit dem die Methode aufgerufen wird.</li>
+                    <li><span class="highlight">Parameterliste</span> in runden Klammern nimmt die Eingabewerte an, mit denen die Methode arbeitet.</li>
+                </ul>
+
+                <div class="example-box">
+                    <h3>Beispiel: Eine Methode in Java</h3>
+                    <pre>
+public int addiere(int a, int b) {
+    return a + b;
+}
+                    </pre>
+                    <p>In diesem Beispiel ist <code>public</code> der Zugriffsmodifikator, <code>int</code> der Rückgabewert, und <code>addiere</code> ist der Methodenname. Die Methode nimmt zwei Parameter <code>a</code> und <code>b</code> und gibt deren Summe zurück.</p>
+                </div>
+
+                <h2>6. Implementierung des größten gemeinsamen Teilers (ggT) in Java</h2>
+                <p>Ein klassisches Algorithmusproblem ist die Berechnung des <strong>größten gemeinsamen Teilers (ggT)</strong> zweier Zahlen. In Java kann dies auf zwei Arten implementiert werden: iterativ und rekursiv.</p>
+
+                <div class="example-box">
+                    <h3>Beispiel: Iterative ggT-Berechnung in Java</h3>
+                    <pre>
+public class GGT {
+    public static void main(String[] args) {
+        int a = 36;
+        int b = 8;
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        System.out.println("Der ggT ist: " + a);
+    }
+}
+                    </pre>
+                    <p>Hier wird eine While-Schleife verwendet, um die Berechnung durch wiederholtes Subtrahieren der kleineren Zahl von der größeren durchzuführen, bis beide Zahlen gleich sind.</p>
+                </div>
+
+                <div class="example-box">
+                    <h3>Beispiel: Rekursive ggT-Berechnung in Java</h3>
+                    <pre>
+public class GGT {
+    public static int ggT(int a, int b) {
+        if (a == b) {
+            return a;
+        } else if (a > b) {
+            return ggT(a - b, b);
+        } else {
+            return ggT(a, b - a);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Der ggT ist: " + ggT(36, 8));
+    }
+}
+                    </pre>
+                    <p>Dies ist eine rekursive Lösung, bei der sich die Methode selbst aufruft, bis eine Abbruchbedingung erreicht ist (d.h. <code>a == b</code>).</p>
+                </div>
+
+                <h2>7. Kontrollstrukturen in Java</h2>
+                <p>Java bietet verschiedene Kontrollstrukturen zur Steuerung des Programmablaufs, z.B. <strong>If-Anweisungen</strong>, <strong>While-Schleifen</strong> und <strong>For-Schleifen</strong>. Diese ermöglichen es, bestimmte Teile des Codes basierend auf Bedingungen auszuführen oder zu wiederholen.</p>
+
+                <div class="example-box">
+                    <h3>Beispiel: If-Anweisung</h3>
+                    <pre>
+int x = 10;
+if (x > 5) {
+    System.out.println("x ist größer als 5");
+} else {
+    System.out.println("x ist kleiner oder gleich 5");
+}
+                    </pre>
+                </div>
+
+                <h2>8. Konsolenausgabe in Java</h2>
+                <p>Die Methoden <code>System.out.print()</code> und <code>System.out.println()</code> werden verwendet, um Ausgaben in die Konsole zu schreiben. Der Unterschied besteht darin, dass <code>println</code> nach der Ausgabe einen Zeilenumbruch erzeugt, während <code>print</code> dies nicht tut.</p>
+
+                <div class="example-box">
+                    <h3>Beispiel: Konsolenausgabe</h3>
+                    <pre>
+System.out.print("Die Summe ist: ");
+System.out.println(15 + 5);
+                    </pre>
+                </div>
+            </section>
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: 04_Algorithmen_in_Java.pdf</h2>
+                <embed src="04_Algorithmen_in_Java.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "informatik-004";
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>

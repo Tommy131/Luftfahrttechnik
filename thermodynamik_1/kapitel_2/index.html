@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 2: Energie und Entropie (Hauptsätze der Thermodynamik)</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel 2: Energie und Entropie (Hauptsätze der Thermodynamik)</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+                <h2>1. Der erste Hauptsatz der Thermodynamik</h2>
+
+                <h3>1.1 Einführung in den 1. Hauptsatz</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Der erste Hauptsatz der Thermodynamik</strong> ist ein
+                    <strong>Energieerhaltungssatz</strong>: Die Gesamtenergie eines Systems kann
+                    sich nur durch Energieübertragungen über die Systemgrenze ändern.
+                </li>
+                <li>
+                    Mathematisch wird dies als <strong>Energiebilanz</strong> ausgedrückt:
+                    <ul class="h2">
+                    <li>
+                        <strong>dE = dQ - dW</strong>, wobei:
+                        <ul class="h2">
+                        <li><strong>dE</strong>: Änderung der inneren Energie</li>
+                        <li><strong>dQ</strong>: zugeführte Wärme</li>
+                        <li><strong>dW</strong>: geleistete Arbeit</li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li>
+                <li>
+                    Verbale Formulierungen:
+                    <ul class="h2">
+                    <li>„Energie kann nicht aus dem Nichts entstehen.“</li>
+                    <li>„Es gibt kein Perpetuum Mobile erster Art.“</li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>1.2 Energieformen eines Systems</h3>
+
+                <ul class="h2">
+                <li>
+                    Die <strong>innere Energie (U)</strong> eines Systems setzt sich zusammen
+                    aus:
+                    <ul class="h2">
+                    <li>
+                        <strong>Kinetischer Energie (Ekin)</strong>: Bewegung der Teilchen.
+                    </li>
+                    <li>
+                        <strong>Potentieller Energie (Epot)</strong>: Lage des Systems im
+                        Gravitationsfeld.
+                    </li>
+                    <li>
+                        <strong>Chemischer Energie (Echem)</strong>: Bindungsenergien der
+                        Moleküle.
+                    </li>
+                    <li>
+                        <strong>Thermischer Energie (U)</strong>: Energie, die in der
+                        thermischen Bewegung der Teilchen gespeichert ist.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h4>Beispiele</h4>
+
+                <ol class="h2">
+                <li>
+                    Ein ruhendes Auto mit 1000 kg Masse und 10 l Benzin hat eine Energie von
+                    <strong>E = 420 MJ</strong> (Brennwert).
+                </li>
+                <li>
+                    Ein Auto, das mit einer Beschleunigung von
+                    <strong>10 m/s²</strong> beschleunigt wird, erfährt eine Kraft von
+                    <strong>F = 10 kN</strong> und eine Arbeit von <strong>W = 50 kJ</strong>.
+                </li>
+                </ol>
+
+                <h3>1.3 Energietransport und Leistung</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Arbeit (W)</strong>: Energie, die durch eine Kraft über eine Strecke
+                    übertragen wird. Formel: <strong>W = F · s</strong>.
+                </li>
+                <li>
+                    <strong>Wärme (Q)</strong>: Energie, die infolge von Temperaturunterschieden
+                    übertragen wird.
+                </li>
+                <li>
+                    <strong>Leistung (P)</strong>: Energie pro Zeiteinheit, Formel:
+                    <strong>P = W/t</strong>.
+                </li>
+                </ul>
+
+                <h3>1.4 Anwendungen des 1. Hauptsatzes</h3>
+
+                <ul class="h2">
+                <li>
+                    <p>
+                    Der 1. Hauptsatz gilt sowohl für <strong>geschlossene</strong> als auch
+                    für <strong>offene Systeme</strong>.
+                    </p>
+
+                    <ul class="h2">
+                    <li>
+                        <strong>Geschlossenes System</strong>: Keine Massenübertragung, nur
+                        Energie (Wärme und Arbeit) wird übertragen.
+                    </li>
+                    <li>
+                        <strong>Offenes System</strong>: Sowohl Masse als auch Energie können
+                        das System durchströmen.
+                    </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                    <strong>Differentialform</strong> des 1. Hauptsatzes für ein
+                    <strong>offenes System</strong>:
+                    </p>
+
+                    <ul class="h2">
+                    <li>
+                        <strong>dE/dt = Σ(ẇm(ein - aus)) + ΣQ + ΣW</strong>, wobei:
+                        <ul class="h2">
+                        <li><strong>ẇm</strong>: Massenstrom</li>
+                        <li><strong>Q</strong>: Wärmestrom</li>
+                        <li><strong>W</strong>: Arbeit</li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Bilanzgleichungen</strong>:</p>
+
+                    <ul class="h2">
+                    <li>
+                        <strong>Geschlossenes System</strong>: <strong>dE = dQ - dW</strong>.
+                    </li>
+                    <li>
+                        <strong>Offenes System</strong>: <strong>dH = dQ + dW + dΦDiss</strong>,
+                        wobei <strong>H</strong> die Enthalpie ist und
+                        <strong>ΦDiss</strong> die Dissipationsarbeit.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2>2. Der zweite Hauptsatz der Thermodynamik</h2>
+
+                <h3>2.1 Entropie und irreversible Prozesse</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Entropie (S)</strong> ist eine
+                    <strong>kalorische Zustandsgröße</strong>, die die
+                    <strong>Unordnung</strong> eines Systems beschreibt. Sie ist besonders
+                    relevant für irreversible Prozesse.
+                </li>
+                <li>
+                    Der 2. Hauptsatz besagt:
+                    <ul class="h2">
+                    <li>
+                        <strong
+                        >Entropie eines Systems kann nur zunehmen oder konstant
+                        bleiben</strong
+                        >.
+                    </li>
+                    <li>
+                        Natürliche Prozesse verlaufen immer in die Richtung einer
+                        <strong>Zunahme der Entropie</strong>.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h4>Mathematische Formulierung</h4>
+
+                <ul class="h2">
+                <li>
+                    <strong>dS = dSQrev + dSirrev</strong>, wobei:
+                    <ul class="h2">
+                    <li>
+                        <strong>dSQrev</strong>: reversible Entropieänderung durch Wärmezufuhr.
+                    </li>
+                    <li>
+                        <strong>dSirrev</strong>: irreversible Entropieproduktion im System,
+                        welche durch Dissipationsvorgänge wie Reibung entsteht.
+                    </li>
+                    <li>
+                        <strong>T · dSirr = dΦDiss</strong>: Entropieproduktion ist proportional
+                        zur Dissipationsarbeit.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>2.2 Reversible und irreversible Prozesse</h3>
+
+                <ul class="h2">
+                <li>
+                    <strong>Reversibel</strong>: Prozess, der in beide Richtungen ablaufen kann,
+                    ohne die Umgebung zu beeinflussen. Entropie bleibt unverändert:
+                    <strong>dS = 0</strong>.
+                </li>
+                <li>
+                    <strong>Irreversibel</strong>: Prozess, bei dem es zu Energieverlusten (z.B.
+                    durch Reibung) kommt. Die Entropie nimmt zu: <strong>dS &gt; 0</strong>.
+                </li>
+                </ul>
+
+                <h4>Beispiele der 2.2</h4>
+
+                <ol class="h2">
+                <li>
+                    <strong>Reversible Wärmezufuhr</strong>: Erwärmung eines Gases durch
+                    langsame Wärmezufuhr, ohne dass Energie durch Reibung verloren geht.
+                </li>
+                <li>
+                    <strong>Irreversible Prozesse</strong>: Wenn ein System Wärme durch Reibung
+                    verliert, führt dies zu einer Erhöhung der Entropie.
+                </li>
+                </ol>
+
+                <h3>2.3 Der zweite Hauptsatz in der Praxis</h3>
+
+                <ul class="h2">
+                <li>
+                    Der zweite Hauptsatz verbietet die
+                    <strong>spontane Übertragung von Wärme</strong> von einem kalten auf einen
+                    warmen Körper.
+                </li>
+                <li>
+                    <strong>Kältemaschinen</strong> und <strong>Wärmepumpen</strong> basieren
+                    auf dem zweiten Hauptsatz und benötigen Arbeit, um Wärme entgegen der
+                    natürlichen Flussrichtung zu übertragen.
+                </li>
+                </ul>
+
+                <h3>2.4 Entropie in offenen Systemen</h3>
+
+                <ul class="h2">
+                <li>
+                    Für offene Systeme gilt:
+                    <ul class="h2">
+                    <li>
+                        Die Änderung der Entropie hängt vom Massenstrom und der
+                        Energiedissipation ab.
+                    </li>
+                    <li>
+                        Entropieänderung in offenen Systemen:
+                        <strong>ΔS = (dSQrev + dSirrev) / T</strong>.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2>3. Mathematische Anwendungen und Beispiele</h2>
+
+                <h3>3.1 Beispiel: Isotherme Kompression eines idealen Gases</h3>
+
+                <ul class="h2">
+                <li>
+                    Ein ideales Gas wird in einem Kolben isotherm expandiert:
+                    <ul class="h2">
+                    <li>Anfangszustand: <strong>p1 = 1 bar, V1 = 0,25 l</strong>.</li>
+                    <li>Endzustand: <strong>p2 = 0,166 bar, V2 = 1,5 l</strong>.</li>
+                    <li>
+                        <strong>Reversible Kolbenarbeit</strong>:
+                        <strong>WKrev = 80,2 J</strong>.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h4>Berechnungen</h4>
+
+                <ul class="h2">
+                <li>Volumenänderungsarbeit: <strong>Wv = -44,8 J</strong>.</li>
+                <li>Verschiebearbeit: <strong>WVA = 125 J</strong>.</li>
+                </ul>
+
+                <h3>3.2 Aufgabe: Berechnung der Entropieänderung</h3>
+
+                <ul class="h2">
+                <li>
+                    Berechnen Sie die Entropieänderung bei der Zustandsänderung eines idealen
+                    Gases:
+                    <ul class="h2">
+                    <li>
+                        <strong>Isobare Wärmezufuhr</strong> von <strong>T1 = 293 K</strong> auf
+                        <strong>T2 = 373 K</strong>.
+                    </li>
+                    <li>
+                        Verwenden Sie die spezifische Wärmekapazität
+                        <strong>cp = 1,007 kJ/(kgK)</strong>.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h4>Lösung</h4>
+
+                <ul class="h2">
+                <li>
+                    <strong>ΔS = cp · ln(T2 / T1) = 1,007 · ln(373 / 293) = 0,24 kJ/kgK</strong
+                    >.
+                </li>
+                </ul>
+
+                <h3>3.3 Beispiel: Adiabate Expansion eines realen Gases</h3>
+
+                <ul class="h2">
+                <li>
+                    Bei der Expansion eines realen Gases, wie z.B. Helium, führt die
+                    Volumenzunahme zu einer Erhöhung der kinetischen Energie und somit zur
+                    Temperaturerhöhung.
+                </li>
+                </ul>
+
+                <h3>3.4 Aufgaben zum 1. und 2. Hauptsatz</h3>
+
+                <ul class="h2">
+                <li>
+                    Aufgabe 1: Berechnen Sie die Energie, die notwendig ist, um 10 l Wasser aus
+                    einem Brunnen in ein 3 m hohes Becken zu pumpen.
+                </li>
+                <li>
+                    Aufgabe 2: Berechnen Sie die reversible Kolbenarbeit bei einer adiabaten
+                    Kompression.
+                </li>
+                </ul>
+
+                <h2>4. Zusammenfassung der Hauptsätze</h2>
+
+                <h3>4.1 Der erste Hauptsatz</h3>
+
+                <ul class="h2">
+                <li>
+                    Der <strong>1. Hauptsatz der Thermodynamik</strong> beschreibt die
+                    <strong>Energieerhaltung</strong>: Die Änderung der Energie eines Systems
+                    entspricht der zugeführten Wärme minus der verrichteten Arbeit.
+                </li>
+                <li>
+                    Mathematisch:
+                    <ul class="h2">
+                    <li>
+                        <strong>Geschlossenes System</strong>: <strong>ΔU = Q - W</strong>.
+                    </li>
+                    <li>
+                        <strong>Offenes System</strong>: <strong>ΔH = Q + W + ΦDiss</strong>.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h3>4.2 Der zweite Hauptsatz</h3>
+
+                <ul class="h2">
+                <li>
+                    Der <strong>2. Hauptsatz der Thermodynamik</strong> legt die
+                    <strong>Richtung natürlicher Prozesse</strong> fest: Prozesse verlaufen
+                    immer in die Richtung einer Erhöhung der Entropie.
+                </li>
+                <li>
+                    Entropieproduktion ist ein Maß für die <strong>Irreversibilität</strong> von
+                    Prozessen.
+                </li>
+                <li>
+                    <strong>Mathematische Formulierung</strong>:
+                    <ul class="h2">
+                    <li><strong>dS = dSQrev + dSirrev</strong>.</li>
+                    <li>
+                        <strong>T · dSirr = dΦDiss</strong>: Entropieproduktion ist proportional
+                        zur Dissipationsarbeit.
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+
+                <hr />
+
+                <p>
+                Diese detaillierte Zusammenfassung enthält die wesentlichen Inhalte des
+                zweiten Kapitels der Vorlesung „Thermodynamik I“, inklusive aller wichtigen
+                mathematischen Herleitungen, Anwendungen und Beispielen. Wenn Sie weitere
+                Fragen haben oder zusätzliche Informationen zu spezifischen Abschnitten
+                benötigen, lassen Sie es mich wissen!
+                </p>
+            </section>
+
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: Soika Thermodynamik I</h2>
+                <embed src="Soika Thermodynamik I 169 Kap 1v14s-2.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "thermo-001";
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>
