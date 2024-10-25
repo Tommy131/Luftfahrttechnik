@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel {Kapitel Nummer}: {Kapitel Name}</title>
+    <link rel="stylesheet" href="../../assets/css/course.css">
+    <link rel="stylesheet" href="../../assets/css/chapter.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #2F4F4F;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .questions-box {
+            background-color: #f0f8ff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .q-a-div {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            background-color: #e0ffff;
+            border-left: 4px solid #00ced1;
+        }
+
+        .answer {
+            padding-left: 10px;
+        }
+
+        .alert-box {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #f5c6cb;
+            background-color: #f8d7da;
+            color: #721c24;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        .alert-box .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #721c24;
+            cursor: pointer;
+        }
+
+        .alert-box .close-btn:hover {
+            color: #f5c6cb;
+        }
+
+        .image-box {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+
+        .pdf-viewer {
+            margin-top: 40px;
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="course-title">Kapitel {Kapitel Nummer}: {Kapitel Name}</h1>
+                <nav>
+                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="article-info">
+            <div id="article-info" class="container">
+            </div>
+        </section>
+
+        <main>
+            <!-- 警示框 -->
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <section class="content">
+            </section>
+
+            <!-- 图片展示区域 -->
+            <!-- <div class="image-box">
+                <img src="pfad_zur_bilddatei.jpg" alt="Beschreibung des Bildes">
+                <p class="image-caption">Beschreibung des Bildes oder eine Anmerkung</p>
+            </div> -->
+
+            <!-- 问题与答案 -->
+            <div class="questions-box">
+                <h2>Fragenkatalog</h2>
+
+                <div class="q-a-div">
+                    <p class="question">1. Beispiel Frage?</p>
+                    <p class="answer">这是问题的答案。<span class="highlight">重点信息</span>将被高亮显示。</p>
+                </div>
+
+                <div class="q-a-div">
+                    <p class="question">2. Beispiel Frage?</p>
+                    <p class="answer">这是另一个答案。<span class="highlight">重点信息</span>在这里展示。</p>
+                </div>
+            </div>
+
+            <!-- PDF阅读器 -->
+            <div class="pdf-viewer">
+                <h5>Zugehöriges Original-PDF: Datei_name.pdf</h2>
+                <embed src="datei_name.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let articleId = "werk-002";
+    </script>
+    <script src="../../assets/js/course_data.js"></script>
+</body>
+</html>

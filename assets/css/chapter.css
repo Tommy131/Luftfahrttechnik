@@ -1,3 +1,22 @@
+/* 文章认证状态组件 */
+.certification-status {
+    margin-left: 10px;
+    font-size: 0.9em;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.certified {
+    background-color: #d4edda;
+    color: #155724;
+}
+.not-certified {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+/* 文章主要区域布局 */
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -6,11 +25,11 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.content h1, .content h2, .content h3 {
+.content h1, .content h2, .content h3, .content h4 {
     color: #007acc;
     margin-top: 20px;
 }
-.content h3 {
+.content h3, .content h4 {
     margin-left: 28px;
 }
 .content p {
@@ -22,15 +41,36 @@
 .content p.none {
     margin-left: 0;
 }
-.content ul {
+.content ul, .content ol {
     margin-top: 10px;
     margin-left: 20px;
 }
-.content ul.h2 {
+.content ul.h2, .content ol.h2 {
     margin-left: 48px;
 }
-.content ul li {
+.content ul li, .content ol li {
     line-height: 1.5em
+}
+
+/* 代码高亮布局 */
+.example-box {
+    padding: 15px;
+    margin: 20px 0 20px 28px;
+    border-left: 4px solid #16a085;
+    background-color: #ecf0f1;
+}
+.example-box h3 {
+    margin-left: 0;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 3px solid #3498db;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .highlight {

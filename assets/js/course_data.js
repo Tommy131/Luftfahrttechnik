@@ -2,7 +2,18 @@
 const courseData = {
     "thermodynamik_1": {
         "courseTitle": "Thermodynamik I",
-        "articles": []
+        "articles": [
+            {
+                "id": "thermo-001",
+                "title": "Kapitel 1: Grundlagen der Thermodynamik",
+                "author": "Jay",
+                "date": "25.10.2024",
+                "category": "Grundlagen",
+                "description": "Grundlagen der Thermodynamik",
+                "isCertified": false,
+                "url": "kapitel_1/index.html"
+            },
+        ]
     },
     "statik": {
         "courseTitle": "Statik",
@@ -14,7 +25,38 @@ const courseData = {
     },
     "ingenieurinformatik": {
         "courseTitle": "Ingenieurinformatik",
-        "articles": []
+        "articles": [
+            {
+                "id": "informatik-001",
+                "title": "Kapitel 1: Zahlensysteme und Binäre Informationsdarstellung",
+                "author": "Jay",
+                "date": "24.10.2024",
+                "category": "Grundlagen",
+                "description": "Zahlensysteme",
+                "isCertified": false,
+                "url": "kapitel_1/index.html"
+            },
+            {
+                "id": "informatik-003",
+                "title": "Kapitel 3: Algorithmen Grundlagen",
+                "author": "Jay",
+                "date": "24.10.2024",
+                "category": "Grundlagen",
+                "description": "Algorithmen Grundlagen",
+                "isCertified": false,
+                "url": "kapitel_3/index.html"
+            },
+            {
+                "id": "informatik-004",
+                "title": "Kapitel 4: Algorithmen in Java",
+                "author": "Jay",
+                "date": "24.10.2024",
+                "category": "Grundlagen",
+                "description": "Algorithmen in Java",
+                "isCertified": false,
+                "url": "kapitel_4/index.html"
+            },
+        ]
     },
     "ingenieurmathematik_1": {
         "courseTitle": "Ingenieurmathematik I",
@@ -26,6 +68,7 @@ const courseData = {
                 "date": "24.10.2024",
                 "category": "Einführung",
                 "description": "Videos von YouTube: MathebyDanielJung",
+                "isCertified": true,
                 "url": "einfuehrung.html"
             },
         ]
@@ -38,9 +81,30 @@ const courseData = {
                 "title": "Kapitel 1: Atomaufbau und Bindungen",
                 "author": "ChatGPT-4o & Jay",
                 "date": "24.10.2024",
-                "category": "Einführung",
+                "category": "Grundlagen",
                 "description": "Die Grundlagen und Aufbau der Werkstofftechnik",
+                "isCertified": false,
                 "url": "kapitel_1/index.html"
+            },
+            {
+                "id": "werk-002",
+                "title": "Kapitel 2: Kristallographie und Strukturen",
+                "author": "ChatGPT-4o & Jay",
+                "date": "24.10.2024",
+                "category": "Grundlagen",
+                "description": "Die Grundlagen und Aufbau der Werkstofftechnik",
+                "isCertified": false,
+                "url": "kapitel_2/index.html"
+            },
+            {
+                "id": "werk-003",
+                "title": "Kapitel 3: Kristallbaufehler",
+                "author": "ChatGPT-4o & Jay",
+                "date": "24.10.2024",
+                "category": "Grundlagen",
+                "description": "Die Grundlagen und Aufbau der Werkstofftechnik",
+                "isCertified": false,
+                "url": "kapitel_3/index.html"
             },
         ]
     }
@@ -60,3 +124,22 @@ function getArticleById(articleId) {
 
     return null;
 }
+
+function closeAlert() {
+    var alertBox = document.getElementById("alertBox");
+    alertBox.style.display = "none";
+}
+
+let article = getArticleById(articleId);
+let articleInfo = document.getElementById("article-info");
+let isCertified = article.isCertified ? "certified" : 'not-certified';
+let isCertifiedStr = article.isCertified ? "Certified" : "Not-Certified";
+
+articleInfo.innerHTML = `
+    <div class="meta-data">
+        <span>Author: ${article.author}</span>
+        <span>Last Update: ${article.date}</span>
+        <span>Category: ${article.category}</span>
+        Status: <span class="certification-status ${isCertified}">${isCertifiedStr}</span>
+    </div>
+`;

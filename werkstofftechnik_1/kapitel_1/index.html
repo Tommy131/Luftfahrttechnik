@@ -146,24 +146,10 @@
             </div>
         </footer>
     </div>
-    <script src="../../assets/js/course_data.js"></script>
+
     <script>
-        const article = getArticleById("werk-001");
-
-        const articleInfo = document.getElementById("article-info");
-
-        articleInfo.innerHTML = `
-            <div class="meta-data">
-                <span>Author: ${article.author}</span>
-                <span>Last Update: ${article.date}</span>
-                <span>Category: ${article.category}</span>
-            </div>
-        `;
-
-        function closeAlert() {
-            var alertBox = document.getElementById("alertBox");
-            alertBox.style.display = "none";
-        }
+        let articleId = "werk-001";
     </script>
+    <script src="../../assets/js/course_data.js"></script>
 </body>
 </html>
