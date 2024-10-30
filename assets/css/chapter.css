@@ -1,3 +1,110 @@
+/* 基本样式定义 */
+.wrapper {
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    width: 30%;
+    transition: 0.3s;
+}
+
+.card-container {
+    background-color: unset;
+}
+
+button.history-back-button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+    color: #007acc;
+    background-color: white;
+    transition: 0.5s;
+}
+
+button.history-back-button:hover {
+    color: #00538b;
+    background-color: #dcf7ff;
+}
+
+footer {
+    width: 100%;
+}
+
+/* 章节信息样式定义 */
+#chapter-info {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #dcf7ff;
+}
+
+#chapter-info p {
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+}
+
+#chapter-info span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#chapter-info .meta-data {
+    justify-content: center;
+}
+
+#inner-frame {
+    margin-bottom: 50px;
+}
+
+/* 文章正文样式定义 */
+.content {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content a {
+    color: #003ed1;
+    transition: 0.3s;
+}
+
+.content a:hover {
+    color: #00305b;
+}
+
+.content a:visited {
+    color: #939393;
+}
+
+.content h2 {
+    margin-top: 25px;
+}
+
+.content h3 {
+    margin-top: 15px;
+}
+
+.content h4 {
+    margin-top: 10px;
+}
+
+.content .list{
+    margin-left: 16px;
+}
+
+.content .paragraph {
+    margin-left: 28px;
+}
+
 /* 文章认证状态组件 */
 .certification-status {
     margin-left: 10px;
@@ -6,112 +113,38 @@
     border-radius: 4px;
     font-weight: bold;
 }
+
 .certified {
     background-color: #d4edda;
     color: #155724;
 }
+
 .not-certified {
     background-color: #f8d7da;
     color: #721c24;
 }
 
-
-/* 文章主要区域布局 */
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.content h1, .content h2, .content h3, .content h4,
-.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
-    color: #007acc;
-    margin-top: 20px;
-}
-.content h3, .content h4,
-.markdown-body h3, .markdown-body h4 {
-    margin-left: 28px;
-}
-.content p,
-.markdown-body p {
-    margin-left: 28px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-.content p.none {
-    margin-left: 0;
-}
-.content ul, .content ol,
-.markdown-body ul, .markdown-body ol {
-    margin-top: 10px;
-    margin-left: 20px;
-}
-.content ul.h2, .content ol.h2 {
-    margin-left: 48px;
-}
-.content ul li, .content ol li,
-.markdown-body ul li, .markdown-body ol li {
-    line-height: 1.5em
-}
-
-/* 代码高亮布局 */
-.example-box {
-    padding: 15px;
-    margin: 20px 0 20px 28px;
-    border-left: 4px solid #16a085;
-    background-color: #ecf0f1;
-}
-.example-box h3 {
-    margin-left: 0;
-}
-
-.example-box pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-left: 3px solid #3498db;
-    overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
+/* 文章主体样式定义 */
 .highlight {
-    background-color: #fffa8b; /* 高亮部分的背景色 */
+    background-color: yellow;
     font-weight: bold;
 }
 
-.important {
-    color: red;
-    font-weight: bold;
-}
-
-.meta-data {
-    justify-content: center;
-}
-
-.questions-box {
-    max-width: 800px;
-    margin-top: 30px;
-    padding: 15px;
+.question-box {
     background-color: #f0f8ff;
     border: 1px solid #ccc;
-}
-.questions-box h2 {
-    margin-bottom: 15px;
-}
-
-.q-a-div {
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-top: 20px;
 }
 
 .question {
-    padding: 5px;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.ask {
+    padding-left: 8px;
     border-left: 4px solid #00ced1;
+    font-weight: bold;
     background-color: #e0ffff;
 }
 
@@ -120,9 +153,10 @@
 }
 
 .image-box {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
 }
+
 .image-box img {
     max-width: 100%;
     height: auto;
@@ -131,6 +165,7 @@
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .image-caption {
     margin-top: 10px;
     font-style: italic;
@@ -138,42 +173,44 @@
 }
 
 .pdf-viewer {
-    margin-top: 30px;
-    margin-bottom: 80px;
-    width: 800px;
-    height: 600px; /* 你可以根据需要调整高度 */
+    margin-top: 20px;
+    width: 100%;
+    height: 600px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .pdf-viewer h5 {
     margin: 5px;
 }
 
-.alert-box {
-    position: relative;
-    width: 800px;
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #f5c6cb;
-    background-color: #f8d7da;
-    color: #721c24;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+
+@media (max-width: 767px) {
+    main {
+        width: 90%;
+    }
 }
 
-.alert-box .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #721c24;
-    cursor: pointer;
+@media (min-width: 768px) {
+    main {
+        width: 80%;
+    }
 }
 
-.alert-box .close-btn:hover {
-    color: #f5c6cb;
+@media (min-width: 1280px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1680px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1900px) {
+    main {
+        width: 30%;
+    }
 }

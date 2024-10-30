@@ -4,27 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luftfahrttechnik - HanskiJay's Study Blog</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="container">
-                <h1 class="logo">
-                    <a href="https://github.com/Tommy131/tommy131.github.io" target="_blank" class="github-link">
-                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="github-logo">
+                <div class="logo-container">
+                    <a href="https://github.com/Tommy131/tommy131.github.io" target="_blank">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
                     </a>
-                    HanskiJay's Study Blog
-                </h1>
+                    <h1>HanskiJay's Study Blog</h1>
+                </div>
                 <nav>
+                    <ul id="nav-list"></ul>
                     <ul>
-                        <li><a href="thermodynamik_1/index.html">Thermodynamik I</a></li>
-                        <li><a href="statik/index.html">Statik</a></li>
-                        <li><a href="konstruktion/index.html">Konstruktion</a></li>
-                        <li><a href="ingenieurinformatik/index.html">Ingenieurinformatik</a></li>
-                        <li><a href="ingenieurmathematik_1/index.html">Ingenieurmathematik I</a></li>
-                        <li><a href="werkstofftechnik_1/index.html">Werkstofftechnik I</a></li>
                         <li><a href="about.html">About Me</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
@@ -42,53 +37,23 @@
                 </div>
             </section>
 
-            <section id="subjects" class="subjects">
-                <h2 class="section-title">Modulen</h2>
-                <div class="container">
-                    <div class="subject-card" id="thermodynamik_1">
-                        <h3><a href="thermodynamik_1/index.html">Thermodynamik I</a></h3>
-                        <p>Grundlegende Konzepte und Anwendungen der Thermodynamik verstehen.</p>
-                    </div>
-                    <div class="subject-card" id="statik">
-                        <h3><a href="statik/index.html">Statik</a></h3>
-                        <p>Grundprinzipien der Mechanik und Strukturanalyse erlernen.</p>
-                    </div>
-                    <div class="subject-card" id="konstruktion">
-                        <h3><a href="konstruktion/index.html">Konstruktion</a></h3>
-                        <p>Grundlegende Fähigkeiten im Design und Bau beherrschen.</p>
-                    </div>
-                    <div class="subject-card" id="ingenieurinformatik">
-                        <h3><a href="ingenieurinformatik/index.html">Ingenieurinformatik</a></h3>
-                        <p>Programmierung und Informationstechnologie im Ingenieurwesen.</p>
-                    </div>
-                    <div class="subject-card" id="ingenieurmathematik_1">
-                        <h3><a href="ingenieurmathematik_1/index.html">Ingenieurmathematik I</a></h3>
-                        <p>Grundlagen und Anwendungen der Ingenieurmathematik.</p>
-                    </div>
-                    <div class="subject-card" id="werkstofftechnik_1">
-                        <h3><a href="werkstofftechnik_1/index.html">Werkstofftechnik I</a></h3>
-                        <p>Grundlagen und Praxis der Materialwissenschaft.</p>
-                    </div>
-                </div>
+            <section class="card-container">
+                <h2>Modulen</h2>
+                <div id="subject-list" class="container"></div>
             </section>
 
-            <section id="latest-articles" class="latest-articles-section">
-                <h2 class="section-title">Neueste Artikel</h2>
-                <div class="container">
-                    <ul id="article-list" class="article-list"></ul>
-                </div>
+            <section class="card-container">
+                <h2>Neueste Kapiteln</h2>
+                <div id="chapter-list" class="container"></div>
             </section>
 
         </main>
 
-        <footer>
-            <div class="container">
-                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
-            </div>
-        </footer>
+        <footer></footer>
     </div>
 
     <script src="assets/js/course_data.js"></script>
+    <script src="assets/js/render.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

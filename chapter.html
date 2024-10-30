@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel {Kapitel Nummer}: {Kapitel Name}</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chapter.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1 id="chapter-title">Kapitel {Kapitel Nummer}: {Kapitel Name}</h1>
+                <nav>
+                    <button type="button" onclick="history.back()" class="history-back-button">Zurück</button>
+                </nav>
+            </div>
+        </header>
+
+        <section id="chapter-info"></section>
+
+        <main>
+            <div class="alert-box" id="alertBox">
+                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
+                <button class="close-btn" onclick="closeAlert()">&times;</button>
+            </div>
+
+            <div id="inner-frame">
+            </div>
+        </main>
+
+        <footer></footer>
+    </div>
+
+    <script src="assets/js/course_data.js"></script>
+    <script src="assets/js/chapter.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

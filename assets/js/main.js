@@ -1,40 +1,75 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // 将所有科目的文章数据合并为一个数组
-    let allArticles = [];
-    for(let tagName in courseData) {
-        let course = courseData[tagName];
-        let articles = [];
+/*
+ *        _____   _          __  _____   _____   _       _____   _____
+ *      /  _  \ | |        / / /  _  \ |  _  \ | |     /  _  \ /  ___|
+ *      | | | | | |  __   / /  | | | | | |_| | | |     | | | | | |
+ *      | | | | | | /  | / /   | | | | |  _  { | |     | | | | | |   _
+ *      | |_| | | |/   |/ /    | |_| | | |_| | | |___  | |_| | | |_| |
+ *      \_____/ |___/|___/     \_____/ |_____/ |_____| \_____/ \_____/
+ *
+ *  Copyright (c) 2023 by OwOTeam-DGMT (OwOBlog).
+ * @Date         : 2024-10-30 15:01:04
+ * @Author       : HanskiJay
+ * @LastEditors  : HanskiJay
+ * @LastEditTime : 2024-10-30 21:46:36
+ * @E-Mail       : support@owoblog.com
+ * @Telegram     : https://t.me/HanskiJay
+ * @GitHub       : https://github.com/Tommy131
+ */
 
-        course.articles.forEach(article => {
-            article["url"] = tagName + "/" + article["url"];
-            article["course"] = course.courseTitle;
-            articles.push(article);
-        });
-        allArticles = allArticles.concat(articles);
-    }
+// 自动化创建 footer
+document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector("footer");
 
-    // 根据发布日期进行排序，最新的文章排在最前面
-    allArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+    const containerDiv = document.createElement("div");
+    containerDiv.className = "container";
 
-    // 选择最新的三篇文章
-    const latestArticles = allArticles.slice(0, 3);
+    const copyrightText = document.createElement("p");
+    copyrightText.innerHTML = "&copy; 2024 HanskiJay All Rights Reserved.";
 
-    // 获取文章列表的容器
-    const articleList = document.getElementById("article-list");
-
-    // 遍历最新文章数据并生成HTML
-    latestArticles.forEach(article => {
-        const listItem = document.createElement("li");
-        listItem.className = "article";
-        listItem.innerHTML = `
-            <h3><a href="${article.url}">${article.title}</a></h3>
-            <div class="meta-data">
-                <span>Author: ${article.author}</span>
-                <span>Last Update: ${article.date}</span>
-                <span>Module: ${article.course}</span>
-                <span>Category: ${article.category}</span>
-            </div>
-        `;
-        articleList.appendChild(listItem);
-    });
+    containerDiv.appendChild(copyrightText);
+    footer.appendChild(containerDiv);
+    document.body.appendChild(footer);
 });
+
+// 关闭警告框
+function closeAlert() {
+    const alertBox = document.getElementById("alertBox");
+    alertBox.style.display = "none";
+}
+
+function createPDFViewer(filePath) {
+    const pdfViewer = document.createElement('div');
+    pdfViewer.className = 'pdf-viewer';
+
+    const heading = document.createElement('h5');
+    heading.textContent = 'Zugehöriges Original-PDF: ' + filePath.split('/').pop().split('\\').pop();
+
+    const embed = document.createElement('embed');
+    embed.src = filePath;
+    embed.type = 'application/pdf';
+    embed.width = '100%';
+    embed.height = '100%';
+
+    pdfViewer.appendChild(heading);
+    pdfViewer.appendChild(embed);
+
+    return pdfViewer;
+}
+
+function createImageBox(filePath, description) {
+    const imageBox = document.createElement('div');
+    imageBox.className = 'image-box';
+
+    const img = document.createElement('img');
+    img.src = filePath;
+    img.alt = description;
+
+    const descriptionP = document.createElement('p');
+    descriptionP.className = "image-caption";
+    descriptionP.textContent = description;
+
+    imageBox.appendChild(img);
+    imageBox.appendChild(descriptionP);
+
+    return imageBox;
+}

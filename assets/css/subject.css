@@ -1,0 +1,97 @@
+/* 基本样式定义 */
+.wrapper {
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    transition: 0.3s;
+}
+
+.card-container {
+    background-color: unset;
+}
+
+button.history-back-button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+    color: #007acc;
+    background-color: white;
+    transition: 0.5s;
+}
+
+button.history-back-button:hover {
+    color: #00538b;
+    background-color: #dcf7ff;
+}
+
+footer {
+    width: 100%;
+}
+
+/* 单个章节卡片样式 */
+.chapter {
+    margin-bottom: 10px;
+    text-align: left;
+    border-radius: 10px;
+    border-left: 5px solid #007acc;
+}
+
+.chapter:hover {
+    transform: translateY(-5px);
+}
+
+.chapter a {
+    display: block;
+    text-decoration: none;
+    color: #007acc;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.chapter a:hover {
+    text-decoration: underline;
+}
+
+.chapter p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+@media (max-width: 767px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1280px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1680px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1900px) {
+    main {
+        width: 30%;
+    }
+}
