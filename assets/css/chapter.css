@@ -63,6 +63,25 @@ footer {
     margin-bottom: 50px;
 }
 
+/* 文章认证状态组件 */
+.certification-status {
+    margin-left: 10px;
+    font-size: 0.9em;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.certified {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.not-certified {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
 /* 文章正文样式定义 */
 .content {
     margin: 0 auto;
@@ -98,30 +117,37 @@ footer {
 }
 
 .content .list{
-    margin-left: 16px;
+    margin: 10px 0 10px 16px;
 }
 
 .content .paragraph {
     margin-left: 28px;
 }
 
-/* 文章认证状态组件 */
-.certification-status {
-    margin-left: 10px;
-    font-size: 0.9em;
-    padding: 2px 5px;
-    border-radius: 4px;
-    font-weight: bold;
+/* 代码高亮布局 */
+.example-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    background-color: #ecf0f1;
+}
+.example-box h3 {
+    margin-top: 0;
+    margin-left: 0;
 }
 
-.certified {
-    background-color: #d4edda;
-    color: #155724;
+.example-box pre, .example-box .formula {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 3px solid #c5c5c5;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-.not-certified {
-    background-color: #f8d7da;
-    color: #721c24;
+.example-box .formula {
+    border-left: 3px solid #16a085;
 }
 
 /* 文章主体样式定义 */

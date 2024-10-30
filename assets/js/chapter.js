@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 17:48:31
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-10-30 21:09:21
+ * @LastEditTime : 2024-10-30 23:25:10
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -68,6 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         case "md":
         case "markdown":
+            if (typeof marked === "object") {
+                fetch(`${filePath}/${chapter.id}/index.md`)
+                .then(response => response.text())
+                .then(text => {
+                    const markdownHTML = marked.parse(text);
+                    const innerFrame = document.getElementById("inner-frame");
+                    const contentDiv = document.createElement("div");
+                    contentDiv.className = "content";
+
+                    contentDiv.innerHTML = markdownHTML;
+                    innerFrame.appendChild(contentDiv);
+
+                    document.querySelectorAll("ul, ol").forEach(element => {
+                        element.className = "list";
+                    })
+                })
+            } else {
+                console.error("marked.js 未正确加载");
+            }
         break;
     }
 });

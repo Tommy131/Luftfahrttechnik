@@ -135,7 +135,3 @@
 - **Mathematische Formulierung**:
   - **dS = dSQrev + dSirrev**.
   - **T · dSirr = dΦDiss**: Entropieproduktion ist proportional zur Dissipationsarbeit.
-
----
-
-Diese detaillierte Zusammenfassung enthält die wesentlichen Inhalte des zweiten Kapitels der Vorlesung „Thermodynamik I“, inklusive aller wichtigen mathematischen Herleitungen, Anwendungen und Beispielen. Wenn Sie weitere Fragen haben oder zusätzliche Informationen zu spezifischen Abschnitten benötigen, lassen Sie es mich wissen!

@@ -239,4 +239,12 @@ footer a:hover {
     .card-container .card {
         margin-bottom: 10px;
     }
+
+    .meta-data {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+        color: #777;
+        align-items: flex-start;
+    }
 }

@@ -1,114 +1,63 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapitel 1: Zahlensysteme und Binäre Informationsdarstellung</title>
-    <link rel="stylesheet" href="../../assets/css/course.css">
-    <link rel="stylesheet" href="../../assets/css/chapter.css">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <div class="wrapper">
-        <header>
-            <div class="container">
-                <h1 id="course-title">Kapitel 1: Zahlensysteme und Binäre Informationsdarstellung</h1>
-                <nav>
-                    <a class="history-back-button" onclick="javascript:history.go(-2)">Zur Startseite</a>
-                </nav>
-            </div>
-        </header>
+<section class="content">
+    <h2>1. Codierung und binäre Informationsdarstellung</h2>
+    <p>In der Informatik müssen Informationen codiert werden, damit sie von Computern verarbeitet werden können. Computer arbeiten mit dem <span class="highlight">binären Zahlensystem</span>, das nur zwei Zustände kennt: <span class="highlight">0</span> und <span class="highlight">1</span>. Diese Zustände entsprechen physikalisch den Zuständen "Strom an" und "Strom aus". Alle Daten, die ein Computer verarbeitet, seien es Zahlen, Texte oder Bilder, werden auf diese beiden Zustände reduziert.</p>
+    <p>Die kleinste Informationseinheit ist der <span class="highlight">Bit</span>, der entweder den Wert 0 oder 1 haben kann. Acht Bits ergeben ein <span class="highlight">Byte</span>. Die Anzahl der möglichen Kombinationen, die mit n Bits dargestellt werden können, ist <span class="highlight">2<sup>n</sup></span>. Zum Beispiel ergeben 8 Bits <span class="highlight">256</span> mögliche Kombinationen.</p>
 
-        <section class="article-info">
-            <div id="article-info" class="container">
-            </div>
-        </section>
+    <h2>2. Zahlensysteme</h2>
+    <div class="paragraph">
+        <h3>2.1 Dezimales Zahlensystem</h3>
+        <p>Das <span class="highlight">Dezimalsystem</span> ist das im Alltag am häufigsten verwendete Zahlensystem. Es basiert auf der Basis <span class="highlight">10</span> und verwendet die Ziffern <span class="highlight">0 bis 9</span>. Die Wertigkeit jeder Ziffer wird durch ihre Position bestimmt. Ein Beispiel:</p>
+        <div class="example-box">
+            <p>Die Zahl 7365 im Dezimalsystem:</p>
+            <p class="formula">7365(10) = 5 × 10<sup>0</sup> + 6 × 10<sup>1</sup> + 3 × 10<sup>2</sup> + 7 × 10<sup>3</sup></p>
+        </div>
 
-        <main>
-            <!-- 警示框 -->
-            <div class="alert-box" id="alertBox">
-                <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
-                <button class="close-btn" onclick="closeAlert()">&times;</button>
-            </div>
+        <h3>2.2 Binäres Zahlensystem</h3>
+        <p>Das <span class="highlight">Binärsystem</span> verwendet die Basis <span class="highlight">2</span> und kennt nur die Ziffern <span class="highlight">0</span> und <span class="highlight">1</span>. Der Grund für die Verwendung des Binärsystems in Computern liegt in der Einfachheit, da Hardware wie Transistoren nur zwei Zustände ("Strom ein" und "Strom aus") kennt. Ein Beispiel für die Umwandlung von Binär- in Dezimalzahlen:</p>
+        <div class="example-box">
+            <p>Die Binärzahl 10110:</p>
+            <p class="formula">10110(2) = 0 × 2<sup>0</sup> + 1 × 2<sup>1</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>3</sup> + 1 × 2<sup>4</sup> = 22(10)</p>
+        </div>
 
-            <section class="content">
-                <h2>1. Codierung und binäre Informationsdarstellung</h2>
-                <p>In der Informatik müssen Informationen codiert werden, damit sie von Computern verarbeitet werden können. Computer arbeiten mit dem <span class="highlight">binären Zahlensystem</span>, das nur zwei Zustände kennt: <span class="highlight">0</span> und <span class="highlight">1</span>. Diese Zustände entsprechen physikalisch den Zuständen "Strom an" und "Strom aus". Alle Daten, die ein Computer verarbeitet, seien es Zahlen, Texte oder Bilder, werden auf diese beiden Zustände reduziert.</p>
-                <p>Die kleinste Informationseinheit ist der <span class="highlight">Bit</span>, der entweder den Wert 0 oder 1 haben kann. Acht Bits ergeben ein <span class="highlight">Byte</span>. Die Anzahl der möglichen Kombinationen, die mit n Bits dargestellt werden können, ist <span class="highlight">2<sup>n</sup></span>. Zum Beispiel ergeben 8 Bits <span class="highlight">256</span> mögliche Kombinationen.</p>
-
-                <h2>2. Zahlensysteme</h2>
-
-                <h3>2.1 Dezimales Zahlensystem</h3>
-                <p>Das <span class="highlight">Dezimalsystem</span> ist das im Alltag am häufigsten verwendete Zahlensystem. Es basiert auf der Basis <span class="highlight">10</span> und verwendet die Ziffern <span class="highlight">0 bis 9</span>. Die Wertigkeit jeder Ziffer wird durch ihre Position bestimmt. Ein Beispiel:</p>
-                <div class="example">
-                    <p>Die Zahl 7365 im Dezimalsystem:</p>
-                    <p class="formula">7365(10) = 5 × 10<sup>0</sup> + 6 × 10<sup>1</sup> + 3 × 10<sup>2</sup> + 7 × 10<sup>3</sup></p>
-                </div>
-
-                <h3>2.2 Binäres Zahlensystem</h3>
-                <p>Das <span class="highlight">Binärsystem</span> verwendet die Basis <span class="highlight">2</span> und kennt nur die Ziffern <span class="highlight">0</span> und <span class="highlight">1</span>. Der Grund für die Verwendung des Binärsystems in Computern liegt in der Einfachheit, da Hardware wie Transistoren nur zwei Zustände ("Strom ein" und "Strom aus") kennt. Ein Beispiel für die Umwandlung von Binär- in Dezimalzahlen:</p>
-                <div class="example">
-                    <p>Die Binärzahl 10110:</p>
-                    <p class="formula">10110(2) = 0 × 2<sup>0</sup> + 1 × 2<sup>1</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>3</sup> + 1 × 2<sup>4</sup> = 22(10)</p>
-                </div>
-
-                <h3>2.3 Hexadezimales Zahlensystem</h3>
-                <p>Das <span class="highlight">Hexadezimalsystem</span> basiert auf der Basis <span class="highlight">16</span> und verwendet sowohl Ziffern als auch Buchstaben (<span class="highlight">0-9, A-F</span>), um Zahlen kompakter darzustellen. Jede hexadezimale Ziffer entspricht vier Binärziffern (Bits), was das Hexadezimalsystem zu einer praktischen Darstellungsmethode für binäre Zahlen macht. Beispiel:</p>
-                <div class="example">
-                    <p>Die Dezimalzahl 7365 in binär und hexadezimal:</p>
-                    <p class="formula">7365(10) = 0001 1100 1100 0101 (2) = 1CC5(16)</p>
-                </div>
-
-                <h2>3. Rechenoperationen im Binärsystem</h2>
-
-                <h3>3.1 Addition im Binärsystem</h3>
-                <p>Die <span class="highlight">Addition</span> im Binärsystem folgt einfachen Regeln, die denen im Dezimalsystem ähneln. Wenn 1 und 1 addiert werden, ergibt dies 10 im Binärsystem, wobei ein Übertrag (Carry) auf die nächste Stelle erfolgt. Beispiel:</p>
-                <div class="example">
-                    <p>Die Addition von 7 und 5 im Binärsystem:</p>
-                    <p class="formula">0111(2) + 0101(2) = 1100(2) = 12(10)</p>
-                </div>
-
-                <h3>3.2 Subtraktion und Komplementbildung</h3>
-                <p>Negative Zahlen werden im Binärsystem durch das <span class="highlight">Zweierkomplement</span> dargestellt. Dies ermöglicht es, die Subtraktion auf eine Addition zurückzuführen. Die Berechnung des Zweierkomplements erfolgt in drei Schritten:</p>
-                <ul>
-                    <li>Invertiere alle Bits der positiven Zahl.</li>
-                    <li>Addiere 1 zur invertierten Zahl.</li>
-                </ul>
-                <p>Beispiel für das Zweierkomplement von 203:</p>
-                <div class="example">
-                    <p>Zweierkomplement von 11001011 (203):</p>
-                    <p class="formula">1. Invertieren: 00110100<br>2. Addiere 1: 00110101 = -203</p>
-                </div>
-
-                <h2>4. Darstellung von Gleitkommazahlen</h2>
-                <p>Um <span class="highlight">Kommazahlen</span> in einem Computer darzustellen, wird das Konzept der <span class="highlight">Gleitkommazahlen</span> verwendet. Dabei wird die Zahl als Produkt einer Mantisse und einer Basis mit einem Exponenten geschrieben. Beispiel:</p>
-                <div class="example">
-                    <p>Die Zahl 173,5 kann als Gleitkommazahl dargestellt werden:</p>
-                    <p class="formula">173,5 = 1,735 × 10<sup>2</sup></p>
-                </div>
-                <p>Im Binärsystem wird die Gleitkommazahl durch eine Mantisse, einen Exponenten und ein Vorzeichenbit dargestellt. Das Format nach IEEE-754-Standard teilt die Zahl in 32 Bits (1 Bit Vorzeichen, 8 Bits Exponent, 23 Bits Mantisse) auf. Diese Methode ermöglicht es, sowohl sehr kleine als auch sehr große Zahlen darzustellen, jedoch mit einer begrenzten Genauigkeit (z.B. 7 Dezimalstellen bei einer 32-Bit-Gleitkommazahl).</p>
-
-                <h2>5. Fehlerbeispiele in der Informatik</h2>
-                <p>Ein berühmtes Beispiel für einen Rechenfehler ist der <span class="highlight">Absturz der Ariane-5-Rakete</span>, der durch einen Rundungsfehler verursacht wurde. Der Bordcomputer versuchte, eine 64-Bit-Gleitkommazahl in eine 16-Bit-Ganzzahl umzuwandeln, was zu einem Überlauf führte. Dies zeigt, wie wichtig die sorgfältige Behandlung von Gleitkommazahlen in Computersystemen ist.</p>
-            </section>
-
-            <!-- PDF阅读器 -->
-            <div class="pdf-viewer">
-                <h5>Zugehöriges Original-PDF: 07.10.24_01_IngInf_Zahlensysteme.pdf</h2>
-                <embed src="07.10.24_01_IngInf_Zahlensysteme.pdf" type="application/pdf" width="100%" height="100%">
-            </div>
-        </main>
-
-        <footer>
-            <div class="container">
-                <p>&copy; 2024 HanskiJay All Rights Reserved.</p>
-            </div>
-        </footer>
+        <h3>2.3 Hexadezimales Zahlensystem</h3>
+        <p>Das <span class="highlight">Hexadezimalsystem</span> basiert auf der Basis <span class="highlight">16</span> und verwendet sowohl Ziffern als auch Buchstaben (<span class="highlight">0-9, A-F</span>), um Zahlen kompakter darzustellen. Jede hexadezimale Ziffer entspricht vier Binärziffern (Bits), was das Hexadezimalsystem zu einer praktischen Darstellungsmethode für binäre Zahlen macht. Beispiel:</p>
+        <div class="example-box">
+            <p>Die Dezimalzahl 7365 in binär und hexadezimal:</p>
+            <p class="formula">7365(10) = 0001 1100 1100 0101 (2) = 1CC5(16)</p>
+        </div>
     </div>
 
-    <script>
-        let articleId = "informatik-001";
-    </script>
-    <script src="../../assets/js/course_data.js"></script>
-</body>
-</html>
+    <h2>3. Rechenoperationen im Binärsystem</h2>
+    <div class="paragraph">
+        <h3>3.1 Addition im Binärsystem</h3>
+        <p>Die <span class="highlight">Addition</span> im Binärsystem folgt einfachen Regeln, die denen im Dezimalsystem ähneln. Wenn 1 und 1 addiert werden, ergibt dies 10 im Binärsystem, wobei ein Übertrag (Carry) auf die nächste Stelle erfolgt. Beispiel:</p>
+        <div class="example-box">
+            <p>Die Addition von 7 und 5 im Binärsystem:</p>
+            <p class="formula">0111(2) + 0101(2) = 1100(2) = 12(10)</p>
+        </div>
+
+        <h3>3.2 Subtraktion und Komplementbildung</h3>
+        <p>Negative Zahlen werden im Binärsystem durch das <span class="highlight">Zweierkomplement</span> dargestellt. Dies ermöglicht es, die Subtraktion auf eine Addition zurückzuführen. Die Berechnung des Zweierkomplements erfolgt in drei Schritten:</p>
+        <ul class="list">
+            <li>Invertiere alle Bits der positiven Zahl.</li>
+            <li>Addiere 1 zur invertierten Zahl.</li>
+        </ul>
+        <p>Beispiel für das Zweierkomplement von 203:</p>
+        <div class="example-box">
+            <p>Zweierkomplement von 11001011 (203):</p>
+            <p class="formula">1. Invertieren: 00110100</p>
+            <p class="formula">2. Addiere 1: 00110101 = -203</p>
+        </div>
+    </div>
+
+    <h2>4. Darstellung von Gleitkommazahlen</h2>
+    <p>Um <span class="highlight">Kommazahlen</span> in einem Computer darzustellen, wird das Konzept der <span class="highlight">Gleitkommazahlen</span> verwendet. Dabei wird die Zahl als Produkt einer Mantisse und einer Basis mit einem Exponenten geschrieben. Beispiel:</p>
+    <div class="example-box">
+        <p>Die Zahl 173,5 kann als Gleitkommazahl dargestellt werden:</p>
+        <p class="formula">173,5 = 1,735 × 10<sup>2</sup></p>
+    </div>
+    <p>Im Binärsystem wird die Gleitkommazahl durch eine Mantisse, einen Exponenten und ein Vorzeichenbit dargestellt. Das Format nach IEEE-754-Standard teilt die Zahl in 32 Bits (1 Bit Vorzeichen, 8 Bits Exponent, 23 Bits Mantisse) auf. Diese Methode ermöglicht es, sowohl sehr kleine als auch sehr große Zahlen darzustellen, jedoch mit einer begrenzten Genauigkeit (z.B. 7 Dezimalstellen bei einer 32-Bit-Gleitkommazahl).</p>
+
+    <h2>5. Fehlerbeispiele in der Informatik</h2>
+    <p>Ein berühmtes Beispiel für einen Rechenfehler ist der <span class="highlight">Absturz der Ariane-5-Rakete</span>, der durch einen Rundungsfehler verursacht wurde. Der Bordcomputer versuchte, eine 64-Bit-Gleitkommazahl in eine 16-Bit-Ganzzahl umzuwandeln, was zu einem Überlauf führte. Dies zeigt, wie wichtig die sorgfältige Behandlung von Gleitkommazahlen in Computersystemen ist.</p>
+</section>
