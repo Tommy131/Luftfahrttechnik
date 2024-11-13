@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/chapter.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -25,7 +33,12 @@
         <main>
             <div class="alert-box" id="alertBox">
                 <span>Bitte beachten Sie: Diese Zusammenfassung wurde von KI generiert. Der Inhalt könnte Fehler enthalten.</span>
-                <button class="close-btn" onclick="closeAlert()">&times;</button>
+                <button type="button" class="close-btn" onclick="closeAlert(this)">&times;</button>
+            </div>
+
+            <div class="alert-box warning">
+                <span>Der Inhalt des Artikels dient ausschließlich akademischen Diskussionen. Ohne Erlaubnis ist das Kopieren, Weiterverbreiten, Weiterverarbeiten und lokale Speichern strengstens untersagt!</span>
+                <button type="button" class="close-btn" onclick="closeAlert(this)">&times;</button>
             </div>
 
             <div id="inner-frame">
@@ -35,8 +48,8 @@
         <footer></footer>
     </div>
 
-    <script src="assets/js/course_data.js"></script>
-    <script src="assets/js/chapter.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/course_data.js"></script>
+    <script type="text/javascript" src="assets/js/chapter.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

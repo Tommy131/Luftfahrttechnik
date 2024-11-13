@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 17:48:31
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-10-30 23:25:10
+ * @LastEditTime : 2024-11-12 23:34:56
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isCertified = chapter.isCertified ? "certified" : 'not-certified';
     const isCertifiedStr = chapter.isCertified ? "Certified" : "Not-Certified";
+
+    if(chapter.isCertified) {
+        const alertBox = document.getElementById("alertBox");
+        alertBox.style.display = "none";
+
+        const innerFrame = document.getElementById("inner-frame");
+        innerFrame.style.marginTop = "50px";
+    }
 
     chapterInfo.innerHTML = `
         <div class="container">
@@ -89,4 +97,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         break;
     }
+
+    setTimeout(() => {
+        // 确保 MathJax 渲染
+        if (window.MathJax) {
+            loadMathJaxAndRender();
+        } else {
+            // MathJax 未加载，等待加载完成后渲染
+            window.addEventListener('load', loadMathJaxAndRender);
+        }
+    }, 200);
 });
