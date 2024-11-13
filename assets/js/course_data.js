@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 15:01:04
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-10-30 21:00:41
+ * @LastEditTime : 2024-11-12 22:32:07
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -59,7 +59,118 @@ const subjectData = {
     },
     "Statik": {
         name: "Statik",
-        chapters: []
+        chapters: [
+            {
+                id: "modul-001",
+                title: "Modul 1: Grundlagen der Technische Mechanik 1",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Grundlagen der Technische Mechanik 1",
+                isCertified: true
+            },
+            {
+                id: "modul-002",
+                title: "Modul 2: Grundlagen der Statik 1",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Grundlagen der Statik 1",
+                isCertified: true
+            },
+            {
+                id: "modul-003",
+                title: "Modul 3: Prinzipien & Freischneideübungen",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Prinzipien & Freischneideübungen",
+                isCertified: true
+            },
+            {
+                id: "modul-004",
+                title: "Modul 4: Kräfteübertragung",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Kräfteübertragung",
+                isCertified: true
+            },
+            {
+                id: "modul-005",
+                title: "Modul 5: Kräftesysteme",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Kräftesysteme",
+                isCertified: true
+            },
+            {
+                id: "modul-006",
+                title: "Modul 6: Gleichgewicht",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Gleichgewicht",
+                isCertified: true
+            },
+            {
+                id: "modul-007",
+                title: "Modul 7: Momentenwirkung einer Einzelkraft",
+                type: "markdown",
+                author: "Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Momentenwirkung einer Einzelkraft",
+                isCertified: true
+            },
+            {
+                id: "modul-008",
+                title: "Modul 8: Übungsaufgaben",
+                type: "markdown",
+                author: "Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Übungsaufgaben",
+                isCertified: true
+            },
+            {
+                id: "modul-009",
+                title: "Modul 9: Allgemeines räumliches Kräftesystem",
+                type: "markdown",
+                author: "Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Allgemeines räumliches Kräftesystem",
+                isCertified: true
+            },
+            {
+                id: "modul-010",
+                title: "Modul 10: Tragwerke",
+                type: "markdown",
+                author: "Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Tragwerke",
+                isCertified: true
+            },
+            {
+                id: "modul-011",
+                title: "Modul 11: Übungsaufgaben zur Tragwerke",
+                type: "markdown",
+                author: "Dr. Herr König",
+                date: "12.11.2024",
+                category: "Grundlagen",
+                description: "Übungsaufgaben zur Tragwerke",
+                isCertified: true
+            },
+    ]
     },
     "Konstruktion": {
         name: "Konstruktion",
@@ -150,6 +261,16 @@ const subjectData = {
                 type: "html",
                 author: "ChatGPT-4o & Jay",
                 date: "24.10.2024",
+                category: "Grundlagen",
+                description: "Die Grundlagen und Aufbau der Werkstofftechnik",
+                isCertified: false
+            },
+            {
+                id: "werk-004",
+                title: "Kapitel 4: Materialwissenschaft - Mechanische Eigenschaften",
+                type: "md",
+                author: "ChatGPT-4o & Jay",
+                date: "30.10.2024",
                 category: "Grundlagen",
                 description: "Die Grundlagen und Aufbau der Werkstofftechnik",
                 isCertified: false
