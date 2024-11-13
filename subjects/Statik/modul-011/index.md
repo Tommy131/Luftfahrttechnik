@@ -246,7 +246,7 @@ $\[
 
 ### 示例 1：包含零杆的桁架
 
-![4.7.4-b1](./subjects/Statik/modul-011/imgs/4.7.4-b1.png)
+![4.7.4-1](./subjects/Statik/modul-011/imgs/4.7.4-1.png)
 
 在以下三种情况下，杆可以视为零杆：
 
