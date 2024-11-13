@@ -10,15 +10,21 @@
  * @Date         : 2024-10-30 17:48:31
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-11-12 23:34:56
+ * @LastEditTime : 2024-11-13 23:58:26
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
  */
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
+    const chapterId = urlParams.get("chapterId");
 
-    const chapter = getChapterById(urlParams.get("chapterId"));
+    if(chapterId === null) {
+        document.body.innerHTML = "403 Forbidden";
+        return;
+    }
+
+    const chapter = getChapterById(chapterId);
 
     const chapterTitle = document.getElementById("chapter-title");
     const chapterInfo = document.getElementById("chapter-info");

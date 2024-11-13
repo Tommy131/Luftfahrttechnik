@@ -18,7 +18,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 解析 URL 参数获取科目名称
     const urlParams = new URLSearchParams(window.location.search);
-    const subject = subjectData[urlParams.get("subjectId")];
+    const subjectId = urlParams.get("subjectId");
+
+    if(subjectId === null) {
+        document.body.innerHTML = "403 Forbidden";
+        return;
+    }
+
+    const subject = subjectData[subjectId];
 
     // 设置页面的课程标题和文档标题
     const subjectTitle = document.getElementById("subject-title");
