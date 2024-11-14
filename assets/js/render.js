@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 15:01:04
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-10-30 18:58:37
+ * @LastEditTime : 2024-11-14 10:08:04
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         subject.chapters.forEach(chapter => {
             chapter["url"] = `chapter.html?chapterId=${chapter.id}`;
-            chapter["subject"] = subject.courseTitle;
+            chapter["subject"] = subjectTagName;
             chapters.push(chapter);
         });
         allChapters = allChapters.concat(chapters);

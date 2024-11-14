@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 15:01:04
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-11-12 22:32:07
+ * @LastEditTime : 2024-11-14 10:20:47
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -40,7 +40,7 @@ const subjectData = {
                 title: "Kapitel 1: Grundlagen der Thermodynamik",
                 type: "markdown",
                 author: "Jay",
-                date: "25.10.2024",
+                date: "2024.10.25",
                 category: "Grundlagen",
                 description: "Grundlagen der Thermodynamik",
                 isCertified: false
@@ -50,7 +50,7 @@ const subjectData = {
                 title: "Kapitel 2: Energie und Entropie (Hauptsätze der Thermodynamik)",
                 type: "markdown",
                 author: "Jay",
-                date: "25.10.2024",
+                date: "2024.10.25",
                 category: "Grundlagen",
                 description: "Hauptsätze der Thermodynamik",
                 isCertified: false
@@ -65,7 +65,7 @@ const subjectData = {
                 title: "Modul 1: Grundlagen der Technische Mechanik 1",
                 type: "markdown",
                 author: "ChatGPT-4o (translated) & Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Grundlagen der Technische Mechanik 1",
                 isCertified: true
@@ -75,7 +75,7 @@ const subjectData = {
                 title: "Modul 2: Grundlagen der Statik 1",
                 type: "markdown",
                 author: "ChatGPT-4o (translated) & Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Grundlagen der Statik 1",
                 isCertified: true
@@ -85,7 +85,7 @@ const subjectData = {
                 title: "Modul 3: Prinzipien & Freischneideübungen",
                 type: "markdown",
                 author: "ChatGPT-4o (translated) & Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Prinzipien & Freischneideübungen",
                 isCertified: true
@@ -95,7 +95,7 @@ const subjectData = {
                 title: "Modul 4: Kräfteübertragung",
                 type: "markdown",
                 author: "ChatGPT-4o (translated) & Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Kräfteübertragung",
                 isCertified: true
@@ -105,7 +105,7 @@ const subjectData = {
                 title: "Modul 5: Kräftesysteme",
                 type: "markdown",
                 author: "ChatGPT-4o (translated) & Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Kräftesysteme",
                 isCertified: true
@@ -115,7 +115,7 @@ const subjectData = {
                 title: "Modul 6: Gleichgewicht",
                 type: "markdown",
                 author: "ChatGPT-4o (translated) & Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Gleichgewicht",
                 isCertified: true
@@ -125,7 +125,7 @@ const subjectData = {
                 title: "Modul 7: Momentenwirkung einer Einzelkraft",
                 type: "markdown",
                 author: "Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Momentenwirkung einer Einzelkraft",
                 isCertified: true
@@ -135,7 +135,7 @@ const subjectData = {
                 title: "Modul 8: Übungsaufgaben",
                 type: "markdown",
                 author: "Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Übungsaufgaben",
                 isCertified: true
@@ -145,7 +145,7 @@ const subjectData = {
                 title: "Modul 9: Allgemeines räumliches Kräftesystem",
                 type: "markdown",
                 author: "Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Allgemeines räumliches Kräftesystem",
                 isCertified: true
@@ -155,7 +155,7 @@ const subjectData = {
                 title: "Modul 10: Tragwerke",
                 type: "markdown",
                 author: "Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Tragwerke",
                 isCertified: true
@@ -165,7 +165,7 @@ const subjectData = {
                 title: "Modul 11: Übungsaufgaben zur Tragwerke",
                 type: "markdown",
                 author: "Dr. Herr König",
-                date: "12.11.2024",
+                date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Übungsaufgaben zur Tragwerke",
                 isCertified: true
@@ -184,7 +184,7 @@ const subjectData = {
                 title: "Kapitel 1: Zahlensysteme und Binäre Informationsdarstellung",
                 type: "html",
                 author: "Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Grundlagen",
                 description: "Zahlensysteme",
                 isCertified: false
@@ -194,7 +194,7 @@ const subjectData = {
                 title: "Kapitel 3: Algorithmen Grundlagen",
                 type: "html",
                 author: "Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Grundlagen",
                 description: "Algorithmen Grundlagen",
                 isCertified: false
@@ -204,7 +204,7 @@ const subjectData = {
                 title: "Kapitel 4: Algorithmen in Java",
                 type: "html",
                 author: "Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Grundlagen",
                 description: "Algorithmen in Java",
                 isCertified: false
@@ -215,13 +215,33 @@ const subjectData = {
         name: "Ingenieurmathematik I",
         chapters: [
             {
-                id: "mathe-001",
+                id: "mathe-000",
                 title: "Einführung: Videos für Selbstlernen",
                 type: "html",
                 author: "Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Einführung",
                 description: "Videos von YouTube: MathebyDanielJung",
+                isCertified: true
+            },
+            {
+                id: "mathe-001",
+                title: "1 Mapping",
+                type: "md",
+                author: "Jay",
+                date: "2024.11.14",
+                category: "Grundlagen",
+                description: "Grundlagen der Ingenieurmathematik",
+                isCertified: true
+            },
+            {
+                id: "mathe-002",
+                title: "2 Definitionen der Funktion",
+                type: "md",
+                author: "Jay",
+                date: "2024.11.14",
+                category: "Grundlagen",
+                description: "Grundlagen der Ingenieurmathematik",
                 isCertified: true
             },
         ]
@@ -234,7 +254,7 @@ const subjectData = {
                 title: "Kapitel 1: Atomaufbau und Bindungen",
                 type: "html",
                 author: "ChatGPT-4o & Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Grundlagen",
                 description: "Die Grundlagen und Aufbau der Werkstofftechnik",
                 isCertified: false,
@@ -247,7 +267,7 @@ const subjectData = {
                 title: "Kapitel 2: Kristallographie und Strukturen",
                 type: "html",
                 author: "ChatGPT-4o & Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Grundlagen",
                 description: "Die Grundlagen und Aufbau der Werkstofftechnik",
                 isCertified: false,
@@ -260,7 +280,7 @@ const subjectData = {
                 title: "Kapitel 3: Kristallbaufehler",
                 type: "html",
                 author: "ChatGPT-4o & Jay",
-                date: "24.10.2024",
+                date: "2024.10.24",
                 category: "Grundlagen",
                 description: "Die Grundlagen und Aufbau der Werkstofftechnik",
                 isCertified: false
@@ -270,7 +290,7 @@ const subjectData = {
                 title: "Kapitel 4: Materialwissenschaft - Mechanische Eigenschaften",
                 type: "md",
                 author: "ChatGPT-4o & Jay",
-                date: "30.10.2024",
+                date: "2024.10.30",
                 category: "Grundlagen",
                 description: "Die Grundlagen und Aufbau der Werkstofftechnik",
                 isCertified: false
