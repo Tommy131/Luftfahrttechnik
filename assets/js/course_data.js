@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 15:01:04
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-11-14 10:20:47
+ * @LastEditTime : 2024-11-15 00:47:02
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -168,6 +168,16 @@ const subjectData = {
                 date: "2024.11.12",
                 category: "Grundlagen",
                 description: "Übungsaufgaben zur Tragwerke",
+                isCertified: true
+            },
+            {
+                id: "modul-012",
+                title: "Modul 12: Innere Kräfte und Momente",
+                type: "markdown",
+                author: "Dr. Herr König",
+                date: "2024.11.14",
+                category: "Grundlagen",
+                description: "Innere Kräfte und Momente",
                 isCertified: true
             },
     ]
