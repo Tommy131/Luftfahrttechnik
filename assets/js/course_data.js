@@ -254,6 +254,36 @@ const subjectData = {
                 description: "Grundlagen der Ingenieurmathematik",
                 isCertified: true
             },
+            {
+                id: "mathe-003",
+                title: "3 Funktionen und Umkehrfunktionen",
+                type: "md",
+                author: "Jay",
+                date: "2024.11.20",
+                category: "Grundlagen",
+                description: "Grundlagen der Ingenieurmathematik",
+                isCertified: true
+            },
+            {
+                id: "mathe-004",
+                title: "4 Die Definition des Grenzwertes einer Folge",
+                type: "md",
+                author: "Jay",
+                date: "2024.11.20",
+                category: "Grundlagen",
+                description: "Grundlagen der Ingenieurmathematik",
+                isCertified: true
+            },
+            {
+                id: "mathe-005",
+                title: "5 Eigenschaften konvergenter Folgen",
+                type: "md",
+                author: "Jay",
+                date: "2024.11.21",
+                category: "Grundlagen",
+                description: "Grundlagen der Ingenieurmathematik",
+                isCertified: true
+            },
         ]
     },
     "Werkstofftechnik-I": {
