@@ -10,7 +10,7 @@
  * @Date         : 2024-10-30 15:01:04
  * @Author       : HanskiJay
  * @LastEditors  : HanskiJay
- * @LastEditTime : 2024-11-15 00:47:02
+ * @LastEditTime : 2024-11-21 22:27:59
  * @E-Mail       : support@owoblog.com
  * @Telegram     : https://t.me/HanskiJay
  * @GitHub       : https://github.com/Tommy131
@@ -178,6 +178,26 @@ const subjectData = {
                 date: "2024.11.14",
                 category: "Grundlagen",
                 description: "Innere Kräfte und Momente",
+                isCertified: true
+            },
+            {
+                id: "modul-013",
+                title: "Modul 13: Linienlasten & Ermittlung der Schnittgrößenverläufe",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.11.14",
+                category: "Grundlagen",
+                description: "Linienlasten & Ermittlung der Schnittgrößenverläufe",
+                isCertified: true
+            },
+            {
+                id: "modul-014",
+                title: "Modul 14: Mehrbereichsprobleme",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.11.14",
+                category: "Grundlagen",
+                description: "Mehrbereichsprobleme",
                 isCertified: true
             },
     ]

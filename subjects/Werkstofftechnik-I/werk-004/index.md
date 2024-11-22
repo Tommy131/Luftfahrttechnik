@@ -3,8 +3,8 @@
 ## 1. Elastische und plastische Verformung
 
 - **Elastische Verformung**: Wenn die äußere Kraft entfernt wird, kann das Material in seinen ursprünglichen Zustand zurückkehren. Diese Verformung wird durch die Dehnung oder Kompression von Atombindungen verursacht und folgt einer linearen Beziehung, die dem Hookeschen Gesetz entspricht:
-  \[ \sigma = E \cdot \varepsilon \]
-  wobei \( E \) der Elastizitätsmodul ist.
+  $\[ \sigma = E \cdot \varepsilon \]$
+  wobei $E$ der Elastizitätsmodul ist.
 
 - **Plastische Verformung**: Unumkehrbare Verformung, bei der Atome dauerhaft von ihrer ursprünglichen Position verschoben werden. Tritt typischerweise nach Erreichen der Streckgrenze des Materials auf.
 - **Streckgrenze (Re)**: Der Spannungswert, bei dem das Material eine dauerhafte Verformung erfährt.
@@ -19,8 +19,8 @@
 
 - **Zugspannung und Zugdehnung**: Für Einkristalle kann die durch Zug erzeugte Dehnung durch kleine Änderungen der Bindungslängen und kleinen Abweichungen der Bindungswinkel beschrieben werden.
 - **Schubspannung und Scherdehnung**: Die Festigkeit der Scherung hängt von den Gleitsystemen innerhalb des Kristalls ab und folgt der Formel:
-  \[ \tau = G \cdot \gamma \]
-  wobei \( G \) der Schermodul ist.
+  $\[ \tau = G \cdot \gamma \]$
+  wobei $G$ der Schermodul ist.
 
 ## 4. Gleitsysteme und Gittertypen
 
