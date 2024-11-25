@@ -200,6 +200,16 @@ const subjectData = {
                 description: "Mehrbereichsprobleme",
                 isCertified: true
             },
+            {
+                id: "modul-015",
+                title: "Modul 15: Modulübungsaufgaben MÜ",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.11.25",
+                category: "Grundlagen",
+                description: "Modulübungsaufgaben MÜ",
+                isCertified: true
+            },
     ]
     },
     "Konstruktion": {
