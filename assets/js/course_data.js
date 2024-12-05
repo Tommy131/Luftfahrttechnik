@@ -220,6 +220,26 @@ const subjectData = {
                 description: "Modulübungsaufgaben MÜ",
                 isCertified: true
             },
+            {
+                id: "modul-017",
+                title: "Modul 17:  Räumliche Balken tragwerke",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.11.28",
+                category: "Grundlagen",
+                description: " Räumliche Balken tragwerke",
+                isCertified: true
+            },
+            {
+                id: "modul-018",
+                title: "Modul 18: Schwerpunkt",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.12.05",
+                category: "Grundlagen",
+                description: "Schwerpunkt",
+                isCertified: true
+            },
     ]
     },
     "Konstruktion": {
