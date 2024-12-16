@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Prüfungsplan für WS24/25, 1. Semester, THI - Luftfahrttechnik">
+    <meta name="keywords" content="THI, Luftfahrttechnik">
+    <meta name="author" content="HanskiJay">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Schedule</title>
+    <title>Prüfungsplan für WS24/25, 1. Semester, THI - Luftfahrttechnik - By HanskiJay</title>
     <style>
         body {
             margin: 0;
@@ -28,6 +31,10 @@
             color: white;
         }
 
+        header h1, h3 {
+            margin: 10px;
+        }
+
         .countdown-header {
             padding: 0.5rem;
             text-align: center;
@@ -35,6 +42,21 @@
             border-radius: 10px;
             background-color: #e9a11e;
             color: #fff;
+        }
+
+        .homepage-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            transition: .3s ease-in-out all;
+            text-decoration: none;
+            box-shadow: 2px 2px 2px #434343;
+            border-radius: 5px;
+            background-color: #2196f3;
+            color: #fff;
+        }
+
+        .homepage-button:hover {
+            background-color: rgb(60, 177, 255);
         }
 
         .calendar-container {
@@ -189,9 +211,11 @@
     <div class="main-container">
         <header>
             <h1>Anstehender Prüfungsplan (Luftfahrttechnik)</h1>
+            <h3>Für THI WS 24/25, 1. Semester</h3>
             <div class="countdown-header">
                 <p id="main-countdown">Loading...</p>
             </div>
+            <a class="homepage-button" href="https://lt.owoblog.com/">Homepage</a>
         </header>
 
         <div class="calendar-container">
@@ -341,7 +365,7 @@
             closestExam.card.classList.remove('future');
             closestExam.card.classList.add('next');
             closestExam.card.querySelector(".countdown").classList.add('next');
-            mainCountdown.textContent = `Next exam: ${formattedDate(closestExam.date)} (${new Intl.DateTimeFormat('de', { weekday: 'long' }).format(closestExam.date)})`;
+            mainCountdown.textContent = `Nächste Prüfung: ${formattedDate(closestExam.date)} (${new Intl.DateTimeFormat('de', { weekday: 'long' }).format(closestExam.date)})`;
         }
     </script>
 </body>
