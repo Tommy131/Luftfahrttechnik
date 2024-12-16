@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Schedule</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .countdown-header {
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            background-color: #e9a11e;
+            color: #fff;
+        }
+
+        .calendar-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding: 2rem;
+            margin: 0 auto;
+            scroll-snap-type: x mandatory;
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+
+        .exam-card {
+            position: relative;
+            flex: 0 0 300px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            scroll-snap-align: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-card.upcoming {
+            border: 2px solid #FFD700;
+        }
+
+        .exam-card.next {
+            border: 2px solid rgba(0, 255, 0, 0.5);
+            border-radius: 10px;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        .exam-card.completed, .exam-card.future {
+            opacity: 0.5;
+        }
+
+        .exam-card.completed:hover, .exam-card.future:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .exam-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #007BFF;
+        }
+
+        .exam-card .date-room,
+        .exam-card .examiners,
+        .exam-card .tools {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #E0F7FA;
+        }
+
+        .exam-card .date-room strong.block-title,
+        .exam-card .examiners strong.block-title,
+        .exam-card .tools strong.block-title {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #007BFF;
+        }
+
+        .exam-card .examiners p, .exam-card .tools ul {
+            text-align: left;
+        }
+
+        .exam-card .countdown {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            background-color: #FFD700;
+            color: #333;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+
+        .exam-card .countdown.completed {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .exam-card .countdown.next {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .calendar-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .calendar-container::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: #007BFF;
+        }
+
+        .exam-card .weekday {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .exam-card .weekday, .exam-card .date-room .time {
+            display: inline-block;
+            padding: 2px;
+            background-color: yellow;
+        }
+
+        .exam-card .date-room .time {
+            margin: 10px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .countdown-header p, footer p {
+            margin: 0;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.6),
+                            0 0 20px 4px rgba(0, 255, 0, 0.5),
+                            0 0 30px 6px rgba(0, 255, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.8),
+                            0 0 25px 8px rgba(0, 255, 0, 0.7),
+                            0 0 35px 10px rgba(0, 255, 0, 0.6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Anstehender Prüfungsplan (Luftfahrttechnik)</h1>
+            <div class="countdown-header">
+                <p id="main-countdown">Loading...</p>
+            </div>
+        </header>
+
+        <div class="calendar-container">
+            <!-- Exam cards will be dynamically rendered here -->
+        </div>
+
+        <footer>
+            <p>Designed by <a href="https://github.com/Tommy131" target="_blank">HanskiJay</a> | &copy; 2024</p>
+        </footer>
+    </div>
+
+    <script>
+        const exams = [
+            {
+                "date": "2025-01-18T08:00:00",
+                "exam_duration": "90",
+                "rooms": ["D116", "D201", "D212", "D213", "D214", "D215", "D216", "J201"],
+                "subject": "Werkstofftechnik 1",
+                "examiner": "Oberhauser, Simon",
+                "co_examiner": "Kerschenlohr, Annegret",
+                "allowed_tools": ["Lineal", "Nicht programmierbarer Taschenrechner"]
+            },
+            {
+                "date": "2025-01-22T10:30:00",
+                "exam_duration": "120",
+                "rooms": ["D201", "D212", "D213", "D214", "D215", "D216", "J201"],
+                "subject": "Grundlagen der Konstruktion",
+                "examiner": "Burger, Uli",
+                "co_examiner": "König, Ludwig",
+                "allowed_tools": [
+                "Nicht programmierbarer Taschenrechner",
+                "Schriftliche Unterlagen",
+                "Tabellenbücher",
+                "Zeichenplatte und -material"
+                ]
+            },
+            {
+                "date": "2025-01-24T08:00:00",
+                "exam_duration": "90",
+                "rooms": ["C104", "C204", "G307", "G310"],
+                "subject": "Ingenieurinformatik und Digitalisierung",
+                "examiner": "Lange, Marlene",
+                "co_examiner": "Schlingensiepen, Jörn",
+                "allowed_tools": ["Open Book", "Offener Laptop", "Offenes Internet"]
+            },
+            {
+                "date": "2025-01-25T10:30:00",
+                "exam_duration": "120",
+                "rooms": ["D201", "D212", "D213", "D214", "D215"],
+                "subject": "Ingenieurmathematik 1",
+                "examiner": "Singer, Peter",
+                "co_examiner": "Horák, Jí",
+                "allowed_tools": [
+                "4 handgeschriebene DIN-A4-Seiten",
+                "Formelsammlung eigener Wahl",
+                "Taschenrechner"
+                ]
+            },
+            {
+                "date": "2025-01-30T10:30:00",
+                "exam_duration": "90",
+                "rooms": ["D201", "D212", "D213", "D214"],
+                "subject": "Statik",
+                "examiner": "König, Ludwig",
+                "co_examiner": "Burger, Uli",
+                "allowed_tools": [
+                "2 Blätter Schwerpunktformelsammlung",
+                "3 handgeschriebene DIN-A4-Seiten",
+                "Nicht programmierbarer Taschenrechner"
+                ]
+            },
+            {
+                "date": "2025-02-01T08:00:00",
+                "exam_duration": "90",
+                "rooms": ["D201", "D212", "D213", "D214", "D215", "J201"],
+                "subject": "Grundlagen der Thermodynamik",
+                "examiner": "Soika, Armin",
+                "co_examiner": "Akgün, Ertan",
+                "allowed_tools": [
+                "2 DIN-A4-Blätter Notizen",
+                "Originalausdruck 'Tabellen, Formeln, Diagramme'",
+                "Nicht programmierbarer Taschenrechner"
+                ]
+            }
+        ];
+
+        const autoFillNull = (str) => String(str).padStart(2, '0');
+        const formattedTime = (examDate) => `${autoFillNull(examDate.getHours())}:${autoFillNull(examDate.getMinutes())}`;
+        const formattedDate = (examDate) => `${examDate.getFullYear()}/${autoFillNull(examDate.getMonth() + 1)}/${autoFillNull(examDate.getDate())}, um ${formattedTime(examDate)} Uhr`;
+
+        const calendarContainer = document.querySelector('.calendar-container');
+        const mainCountdown = document.querySelector('#main-countdown');
+
+        const today = new Date();
+        let closestExam = null;
+
+        exams.forEach(exam => {
+            const examDate = new Date(exam.date);
+            const timeDifference = examDate - today;
+            const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+            const weekday = new Intl.DateTimeFormat('de', { weekday: 'long' }).format(examDate);
+
+            const examCard = document.createElement('div');
+            examCard.className = 'exam-card';
+
+            if (timeDifference < 0) {
+                examCard.classList.add('completed');
+            } else if (!closestExam || timeDifference < closestExam.date - today) {
+                closestExam = { date: examDate, card: examCard };
+            }
+
+            if (timeDifference > 0 && timeDifference < 1000 * 60 * 60 * 24 * 7) {
+                examCard.classList.add('upcoming');
+            }
+
+            if (timeDifference > 0) {
+                examCard.classList.add('future');
+            }
+
+            examCard.innerHTML = `
+                <div class="countdown ${daysRemaining > 0 ? `` : `completed`}">Noch <strong>${daysRemaining > 0 ? `${daysRemaining}</strong> Tage` : 'Completed'}</div>
+                <h3>${exam.subject}</h3>
+                <p class="weekday">${weekday}</p>
+                <div class="date-room">
+                    <strong class="block-title">Datum & Räume</strong>
+                    <p class="time"><strong>${formattedDate(examDate)}</strong></p>
+                    <p class="time">Prüfungszeit: <strong>${exam.exam_duration}</strong> Minuten</p>
+                    <p>${exam.rooms.join(', ')}</p>
+                </div>
+                <div class="examiners">
+                    <strong class="block-title">Prüfer</strong>
+                    <p>1. Prüfer: ${exam.examiner}</p>
+                    <p>2. Prüfer: ${exam.co_examiner}</p>
+                </div>
+                <div class="tools">
+                    <strong class="block-title">Erlaubtes Hilfsmittel</strong>
+                    <ul>
+                        ${exam.allowed_tools.map(tool => `<li>${tool}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+
+            calendarContainer.appendChild(examCard);
+        });
+
+        if (closestExam) {
+            closestExam.card.classList.remove('future');
+            closestExam.card.classList.add('next');
+            closestExam.card.querySelector(".countdown").classList.add('next');
+            mainCountdown.textContent = `Next exam: ${formattedDate(closestExam.date)} (${new Intl.DateTimeFormat('de', { weekday: 'long' }).format(closestExam.date)})`;
+        }
+    </script>
+</body>
+</html>
