@@ -240,6 +240,16 @@ const subjectData = {
                 description: "Schwerpunkt",
                 isCertified: true
             },
+            {
+                id: "modul-019",
+                title: "Modul 19: Berechnung der Schwerpunkte und Standsicherheit geometrischer Körper",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.12.09",
+                category: "Grundlagen",
+                description: "Berechnung der Schwerpunkte und Standsicherheit geometrischer Körper",
+                isCertified: true
+            },
     ]
     },
     "Konstruktion": {
