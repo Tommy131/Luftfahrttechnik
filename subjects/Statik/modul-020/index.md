@@ -196,6 +196,8 @@ $
    \mu = \frac{F}{m \cdot g}
    $
 
+![7.2-3](./subjects/Statik/modul-020/imgs/7.2-3.png)
+
 ### 摩擦系数示例表格
 
 | **材料配对**          | **静摩擦系数 $\mu_0$** | **滑动摩擦系数 $\mu$** |
@@ -208,7 +210,7 @@ $
 | 汽车轮胎与路面        | 0.7...0.9                 | 0.5...0.8                 |
 | 滑雪板与雪            | 0.1...0.3                 | 0.04...0.2                |
 
-![7.2-3](./subjects/Statik/modul-020/imgs/7.2-3.png)
+![7.2-4](./subjects/Statik/modul-020/imgs/7.2-4.png)
 
 ## 静摩擦/滑动摩擦角 $\rho_0$ 和 $\rho$
 
@@ -236,7 +238,7 @@ $
    \mu = \frac{F_R}{F_N} = \tan \rho
    $
 
-![7.2-4](./subjects/Statik/modul-020/imgs/7.2-4.png)
+![7.2-5](./subjects/Statik/modul-020/imgs/7.2-5.png)
 
 ## 物体在斜面上的三种情况
 
@@ -251,12 +253,12 @@ $
 3. **$\alpha > \rho_0$ ：滑动（Gleiten）**
    - 物体开始滑动，滑动摩擦力取代静摩擦力。
 
+![7.2-6](./subjects/Statik/modul-020/imgs/7.2-6.png)
+
 ### 关键点
 
 物体保持静止的条件是：
 **重力 $F_G$ 的作用线必须保持在法线 $\pm \rho_0$ 的范围内！**
-
-![7.2-5](./subjects/Statik/modul-020/imgs/7.2-5.png)
 
 ## 摩擦锥（Reibungskegel）
 
@@ -280,7 +282,7 @@ $
 F_{R0} \leq F_{R0,\text{max}}
 $
 
-![7.2-6](./subjects/Statik/modul-020/imgs/7.2-6.png)
+![7.2-7](./subjects/Statik/modul-020/imgs/7.2-7.png)
 
 ---
 
