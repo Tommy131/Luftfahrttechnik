@@ -250,6 +250,26 @@ const subjectData = {
                 description: "Berechnung der Schwerpunkte und Standsicherheit geometrischer Körper",
                 isCertified: true
             },
+            {
+                id: "modul-020",
+                title: "Modul 20: Reibung",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.12.17",
+                category: "Grundlagen",
+                description: "Reibung",
+                isCertified: true
+            },
+            {
+                id: "modul-021",
+                title: "Modul 21: Seil- & Rollreibung",
+                type: "markdown",
+                author: "ChatGPT-4o (translated) & Dr. Herr König",
+                date: "2024.12.17",
+                category: "Grundlagen",
+                description: "Seil- & Rollreibung",
+                isCertified: true
+            },
     ]
     },
     "Konstruktion": {
