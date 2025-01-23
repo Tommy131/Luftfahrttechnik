@@ -315,8 +315,21 @@
         exams.forEach(exam => {
             const examDate = new Date(exam.date);
             const timeDifference = examDate - today;
-            const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+            const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hoursRemaining = Math.ceil(timeDifference / (1000 * 60 * 60)) % 24; // Calculate remaining hours
             const weekday = new Intl.DateTimeFormat('de', { weekday: 'long' }).format(examDate);
+            
+            let displayedTime = '';
+            
+            if (timeDifference < 0) {
+                displayedTime = '<strong>Completed</strong>';
+            } else if (daysRemaining > 0) {
+                displayedTime = `<strong>Noch ${daysRemaining} Tage</strong>`;
+            } else if (hoursRemaining > 0) {
+                displayedTime = `<strong>Noch ${hoursRemaining} Stunden</strong>`;
+            } else {
+                displayedTime = `<strong>Noch weniger als eine Stunde</strong>`;
+            }
 
             const examCard = document.createElement('div');
             examCard.className = 'exam-card';
@@ -336,7 +349,7 @@
             }
 
             examCard.innerHTML = `
-                <div class="countdown ${daysRemaining > 0 ? `` : `completed`}">Noch <strong>${daysRemaining > 0 ? `${daysRemaining}</strong> Tage` : 'Completed'}</div>
+                <div class="countdown ${daysRemaining > 0 ? `` : `completed`}">${displayedTime}</div>
                 <h3>${exam.subject}</h3>
                 <p class="weekday">${weekday}</p>
                 <div class="date-room">
