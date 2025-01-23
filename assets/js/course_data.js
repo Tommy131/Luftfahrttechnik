@@ -280,6 +280,16 @@ const subjectData = {
         name: "Ingenieurinformatik",
         chapters: [
             {
+                id: "informatik-000",
+                title: "Prüfungsvorbereitung",
+                type: "html",
+                author: "Jay",
+                date: "2025.01.23",
+                category: "Grundlagen",
+                description: "Exam training",
+                isCertified: false
+            },
+            {
                 id: "informatik-001",
                 title: "Kapitel 1: Zahlensysteme und Binäre Informationsdarstellung",
                 type: "html",
