@@ -281,13 +281,33 @@ const subjectData = {
         chapters: [
             {
                 id: "informatik-000",
-                title: "Prüfungsvorbereitung",
+                title: "Prüfungsvorbereitung 1: Kurzfragen",
                 type: "html",
                 author: "Jay",
                 date: "2025.01.23",
                 category: "Grundlagen",
                 description: "Exam training",
-                isCertified: false
+                isCertified: true
+            },
+            {
+                id: "informatik-pv2",
+                title: "Prüfungsvorbereitung 2: Basische Algorithmen",
+                type: "html",
+                author: "Jay",
+                date: "2025.01.23",
+                category: "Grundlagen",
+                description: "Exam training",
+                isCertified: true
+            },
+            {
+                id: "informatik-pv3",
+                title: "Prüfungsvorbereitung3: Hochstufe Algorithmen",
+                type: "html",
+                author: "Jay",
+                date: "2025.01.23",
+                category: "Grundlagen",
+                description: "Exam training",
+                isCertified: true
             },
             {
                 id: "informatik-001",

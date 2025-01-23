@@ -35,43 +35,44 @@
 </head>
 <body>
 
-<h1>Java Kurzfragen</h1>
+<section class="content">
+    <h1>Java Kurzfragen</h1>
 
-<div>
-    <p class="question">1. Kurzfragen (SS24, 6 Punkte)</p>
+    <div>
+        <p class="question">1. Kurzfragen (SS24, 6 Punkte)</p>
 
-    <p><span class="highlight">a)</span> Erklären Sie in eigenen Worten die Bedeutung von <code>this</code> in einer Java-Klasse.</p>
-    <div class="answer">
-        Bezieht sich auf das Objekt, für welches die Methode aufgerufen wurde, <span class="highlight">Referenz auf sich selbst</span>.
+        <p><span class="highlight">a)</span> Erklären Sie in eigenen Worten die Bedeutung von <code>this</code> in einer Java-Klasse.</p>
+        <div class="answer">
+            Bezieht sich auf das Objekt, für welches die Methode aufgerufen wurde, <span class="highlight">Referenz auf sich selbst</span>.
+        </div>
+
+        <p><span class="highlight">b)</span> Wie unterscheidet sich eine <code>ArrayList</code> von einem <code>Array</code> in Java? Geben Sie mindestens eine Gemeinsamkeit und einen Unterschied zwischen den beiden Datentypen an.</p>
+        <div class="answer">
+            <span class="highlight">Gemeinsamkeit</span>: Liste, bzw. geordnete Menge von Objekten vom gleichen Typ. <br>
+            Zugriff über Index möglich. <br>
+            <code>array[i]</code>, <code>arrayList.get(i)</code> <br>
+            <span class="highlight">Unterschied</span>: <br>
+            - <code>Array</code> hat feste Länge. <br>
+            - <code>ArrayList</code> kann dynamisch angepasst werden. <br>
+            - <code>Array</code> ist primitiv. <br>
+            - <code>ArrayList</code> muss importiert werden.
+        </div>
+
     </div>
 
-    <p><span class="highlight">b)</span> Wie unterscheidet sich eine <code>ArrayList</code> von einem <code>Array</code> in Java? Geben Sie mindestens eine Gemeinsamkeit und einen Unterschied zwischen den beiden Datentypen an.</p>
-    <div class="answer">
-        <span class="highlight">Gemeinsamkeit</span>: Liste, bzw. geordnete Menge von Objekten vom gleichen Typ. <br>
-        Zugriff über Index möglich. <br>
-        <code>array[i]</code>, <code>arrayList.get(i)</code> <br>
-        <span class="highlight">Unterschied</span>: <br>
-        - <code>Array</code> hat feste Länge. <br>
-        - <code>ArrayList</code> kann dynamisch angepasst werden. <br>
-        - <code>Array</code> ist primitiv. <br>
-        - <code>ArrayList</code> muss importiert werden.
-    </div>
+    <div>
+        <p class="question">2. Kurzfragen (WS2324, 6 Punkte)</p>
 
-</div>
+        <p><span class="highlight">a)</span> Erklären Sie in eigenen Worten die Bedeutung von <code>null</code> in der Programmiersprache Java. Wann hat eine Variable den Wert <code>null</code>?</p>
+        <div class="answer">
+            Objektvariable wurde nicht instanziiert (mit <code>new</code>). <br>
+            <code>null</code>: Variable hat keinen Wert & auch keinen Speicherplatz; Objekt existiert noch nicht.
+        </div>
 
-<div>
-    <p class="question">2. Kurzfragen (WS2324, 6 Punkte)</p>
-
-    <p><span class="highlight">a)</span> Erklären Sie in eigenen Worten die Bedeutung von <code>null</code> in der Programmiersprache Java. Wann hat eine Variable den Wert <code>null</code>?</p>
-    <div class="answer">
-        Objektvariable wurde nicht instanziiert (mit <code>new</code>). <br>
-        <code>null</code>: Variable hat keinen Wert & auch keinen Speicherplatz; Objekt existiert noch nicht.
-    </div>
-
-    <p><span class="highlight">b)</span> Gegeben ist folgender Java Code. Ist der Code korrekt oder führt er zu einem Compilerfehler? Begründen Sie Ihre Entscheidung.</p>
-    <div class="answer">
-        Der Code führt zu einem Fehler, da <code>int</code> ein primitiver Datentyp ist und <code>null</code> nicht zugewiesen werden kann.
-        <pre>
+        <p><span class="highlight">b)</span> Gegeben ist folgender Java Code. Ist der Code korrekt oder führt er zu einem Compilerfehler? Begründen Sie Ihre Entscheidung.</p>
+        <div class="answer">
+            Der Code führt zu einem Fehler, da <code>int</code> ein primitiver Datentyp ist und <code>null</code> nicht zugewiesen werden kann.
+            <pre><code class="java">
 private int wert;
 
 public void setWert(int w) {
@@ -79,149 +80,51 @@ public void setWert(int w) {
         throw new Exception("Wert darf nicht null sein");
     this.wert = w;
 }
-        </pre>
+            </code></pre>
+        </div>
+
+        <p><span class="highlight">c)</span> Erklären Sie in eigenen Worten was die Rolle der Getter und Setter Methoden ist und warum diese sinnvoll sind.</p>
+        <div class="answer">
+            Ermöglichen kontrollierten Zugriff auf die Klassenattribute. <br>
+            Abrufen und Änderung der Attributwerte. <br>
+            Ermöglichen die Validierung der Daten bevor sie gesetzt werden.
+        </div>
+
     </div>
 
-    <p><span class="highlight">c)</span> Erklären Sie in eigenen Worten was die Rolle der Getter und Setter Methoden ist und warum diese sinnvoll sind.</p>
-    <div class="answer">
-        Ermöglichen kontrollierten Zugriff auf die Klassenattribute. <br>
-        Abrufen und Änderung der Attributwerte. <br>
-        Ermöglichen die Validierung der Daten bevor sie gesetzt werden.
+    <div>
+        <p class="question">3. Kurzfragen (SS23, ca. 4 Punkte)</p>
+
+        <p>Gegeben ist die Basisklasse <code>Buch</code> und zwei davon abgeleitete Klassen, <code>Roman</code> und <code>Fachbuch</code>.</p>
+        <p>Welche der folgenden Aussagen ist richtig? Es kann auch mehr als eine Antwort richtig sein.</p>
+        <div class="answer">
+            <code>Buch einBuch = new Buch();</code> → <span class="highlight">Korrekt</span>. <br>
+            <code>Buch einBuch = new Roman();</code> → <span class="highlight">Korrekt</span>, da <code>Roman</code> von <code>Buch</code> erbt. <br>
+            <code>Roman einRoman = new Buch();</code> → <span class="highlight">Falsch</span>, da <code>Buch</code> kein <code>Roman</code> ist. <br>
+            <code>Roman einBuch = new Fachbuch();</code> → <span class="highlight">Falsch</span>, da <code>Fachbuch</code> kein <code>Roman</code> ist.
+        </div>
+
     </div>
 
-</div>
+    <div>
+        <p class="question">4. Kurzfragen (WS2223, ca. 4 Punkte)</p>
 
-<div>
-    <p class="question">3. Kurzfragen (SS23, ca. 4 Punkte)</p>
+        <p>In Java kann man Methodennparameter übergeben. Für diese Parameter gilt entweder die „call by value“ oder die „call by reference“ Übergabe.</p>
 
-    <p>Gegeben ist die Basisklasse <code>Buch</code> und zwei davon abgeleitete Klassen, <code>Roman</code> und <code>Fachbuch</code>.</p>
-    <p>Welche der folgenden Aussagen ist richtig? Es kann auch mehr als eine Antwort richtig sein.</p>
-    <div class="answer">
-        <code>Buch einBuch = new Buch();</code> → <span class="highlight">Korrekt</span>. <br>
-        <code>Buch einBuch = new Roman();</code> → <span class="highlight">Korrekt</span>, da <code>Roman</code> von <code>Buch</code> erbt. <br>
-        <code>Roman einRoman = new Buch();</code> → <span class="highlight">Falsch</span>, da <code>Buch</code> kein <code>Roman</code> ist. <br>
-        <code>Roman einBuch = new Fachbuch();</code> → <span class="highlight">Falsch</span>, da <code>Fachbuch</code> kein <code>Roman</code> ist.
+        <p><span class="highlight">1a)</span> Erklären Sie verständlich was der Unterschied zwischen den beiden Möglichkeiten ist.</p>
+        <div class="answer">
+            <span class="highlight">Value</span>: Kopie der Variablen als Parameter übergeben, Änderungen am Parameter haben keine Auswirkung auf die ursprüngliche Variable. <br>
+            <span class="highlight">Ref</span>: Es wird ein Zeiger (Referenz) auf die gleiche Adresse der Variable übergeben. Änderungen am Parameter führen auch zur Änderung des ursprünglichen Objekts.
+        </div>
+
+        <p><span class="highlight">1b)</span> Geben Sie zwei Beispiele von Datentypen für die „call by value“ und zwei für „call by reference“ benutzt wird.</p>
+        <div class="answer">
+            <span class="highlight">Value</span>: Primitive Datentypen (z.B. <code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code>). <br>
+            <span class="highlight">Ref</span>: Alle Objekte (selbst definierte Klassen, Arrays, <code>String</code>).
+        </div>
+
     </div>
-
-</div>
-
-<div>
-    <p class="question">4. Kurzfragen (WS2223, ca. 4 Punkte)</p>
-
-    <p>In Java kann man Methodennparameter übergeben. Für diese Parameter gilt entweder die „call by value“ oder die „call by reference“ Übergabe.</p>
-
-    <p><span class="highlight">1a)</span> Erklären Sie verständlich was der Unterschied zwischen den beiden Möglichkeiten ist.</p>
-    <div class="answer">
-        <span class="highlight">Value</span>: Kopie der Variablen als Parameter übergeben, Änderungen am Parameter haben keine Auswirkung auf die ursprüngliche Variable. <br>
-        <span class="highlight">Ref</span>: Es wird ein Zeiger (Referenz) auf die gleiche Adresse der Variable übergeben. Änderungen am Parameter führen auch zur Änderung des ursprünglichen Objekts.
-    </div>
-
-    <p><span class="highlight">1b)</span> Geben Sie zwei Beispiele von Datentypen für die „call by value“ und zwei für „call by reference“ benutzt wird.</p>
-    <div class="answer">
-        <span class="highlight">Value</span>: Primitive Datentypen (z.B. <code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code>). <br>
-        <span class="highlight">Ref</span>: Alle Objekte (selbst definierte Klassen, Arrays, <code>String</code>).
-    </div>
-
-</div>
-
-<h1>Zusammenfassung der vier Algorithmen</h1>
-
-<div class="algorithm">
-    <h2>1. Harmonic Number Berechnung</h2>
-    <p><strong>Problem:</strong> Berechnen und geben Sie die <span class="highlight">n</span>-te harmonische Zahl zurück, d.h.</p>
-    <pre>
-H_n = 1 + 1/2 + 1/3 + ... + 1/n
-    </pre>
-    <p><strong>Algorithmusschritte:</strong></p>
-    <ul>
-        <li>Initialisieren Sie die Teilsumme auf 0 und setzen Sie den Zähler <span class="highlight">k = 1</span>.</li>
-        <li>Schleife von <span class="highlight">k = 1</span> bis <span class="highlight">n</span>, fügen Sie in jeder Iteration <code>1/k</code> zur Teilsumme hinzu.</li>
-        <li>Geben Sie die berechnete Teilsumme zurück.</li>
-    </ul>
-    <p><strong>Java Code Implementierung:</strong></p>
-    <pre>
-public double berechne(int n) {
-    double s = 0;
-    for (int k = 1; k <= n; k++) {
-        s += 1.0 / k;
-    }
-    return s;
-}
-    </pre>
-</div>
-
-<div class="algorithm">
-    <h2>2. Teiler Berechnung</h2>
-    <p><strong>Problem:</strong> Gegeben eine ganze Zahl <span class="highlight">n</span>, ermitteln und geben Sie alle Teiler aus.</p>
-    <p><strong>Algorithmusschritte:</strong></p>
-    <ul>
-        <li>Initialisieren Sie den Wert <span class="highlight">t = 1</span>, um von 1 bis <span class="highlight">n/2</span> zu iterieren.</li>
-        <li>Verwenden Sie eine <span class="highlight">while</span>-Schleife, um zu prüfen, ob jeder Wert ein Teiler von <span class="highlight">n</span> ist.</li>
-        <li>Wenn ein Teiler gefunden wird, geben Sie ihn aus.</li>
-        <li>Die Schleife läuft weiter, bis <span class="highlight">n/2</span> erreicht ist.</li>
-    </ul>
-    <p><strong>Java Code Implementierung:</strong></p>
-    <pre>
-public void teile(int n) {
-    for (int t = 1; t <= n / 2; t++) {
-        if (n % t == 0) {
-            System.out.println(t);
-        }
-    }
-    System.out.println(n);  // n ist auch ein Teiler von n
-}
-    </pre>
-</div>
-
-<div class="algorithm">
-    <h2>3. Quersumme Berechnung</h2>
-    <p><strong>Problem:</strong> Gegeben eine Zahl <span class="highlight">z</span>, berechnen Sie die Quersumme (Summe der Ziffern).</p>
-    <p><strong>Algorithmusschritte:</strong></p>
-    <ul>
-        <li>Initialisieren Sie die Quersumme <span class="highlight">s = 0</span>.</li>
-        <li>Extrahieren Sie jede Ziffer und addieren Sie sie zur Quersumme.</li>
-        <li>Verwenden Sie die Modulo-Operation (<code>z % 10</code>) um die Ziffer zu extrahieren und die Division (<code>z / 10</code>) um die Ziffer zu entfernen.</li>
-        <li>Wiederholen Sie dies, bis <span class="highlight">z</span> gleich 0 ist, und geben Sie die Quersumme <span class="highlight">s</span> zurück.</li>
-    </ul>
-    <p><strong>Java Code Implementierung:</strong></p>
-    <pre>
-public int berechneQuersumme(int z) {
-    int s = 0;
-    while (z > 0) {
-        s += z % 10;
-        z /= 10;
-    }
-    return s;
-}
-    </pre>
-</div>
-
-<div class="algorithm">
-    <h2>4. Näherung des natürlichen Logarithmus (ln(2))</h2>
-    <p><strong>Problem:</strong> Berechnen Sie den natürlichen Logarithmus <span class="highlight">ln(2)</span> mithilfe einer Reihe.</p>
-    <pre>
-ln(2) = 1 - 1/2 + 1/3 - 1/4 + ...
-    </pre>
-    <p><strong>Algorithmusschritte:</strong></p>
-    <ul>
-        <li>Initialisieren Sie die Teilsumme <span class="highlight">s = 0</span> und den Wechsel der Vorzeichen <span class="highlight">z = 1</span>.</li>
-        <li>Verwenden Sie eine <span class="highlight">while</span>-Schleife, um jeden Term zu berechnen und zur Teilsumme hinzuzufügen.</li>
-        <li>Ändern Sie das Vorzeichen jedes Mal, indem Sie <span class="highlight">z = -z</span> setzen.</li>
-        <li>Schließen Sie die Berechnung ab und geben Sie die Teilsumme <span class="highlight">s</span> zurück.</li>
-    </ul>
-    <p><strong>Java Code Implementierung:</strong></p>
-    <pre>
-public double berechneLn2(int n) {
-    double s = 0;
-    double z = 1;
-    for (int k = 1; k <= n; k++) {
-        s += z / k;
-        z = -z;  // Vorzeichen wechseln
-    }
-    return s;
-}
-    </pre>
-</div>
+</section>
 
 </body>
 </html>

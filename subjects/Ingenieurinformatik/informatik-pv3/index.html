@@ -1,0 +1,332 @@
+<section class="content">
+    <h1>Java常用数学算法示例</h1>
+    
+    <h2>1. 求最大公约数 (GCD)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 欧几里得算法（辗转相除法）
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        int a = 56;
+        int b = 98;
+        System.out.println("最大公约数: " + gcd(a, b)); // 输出 14
+    }
+}
+    </code></pre>
+
+    <h2>2. 求最小公倍数 (LCM)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 求最小公倍数
+    public static int lcm(int a, int b) {
+        return Math.abs(a * b) / gcd(a, b);
+    }
+
+    public static void main(String[] args) {
+        int a = 12;
+        int b = 15;
+        System.out.println("最小公倍数: " + lcm(a, b)); // 输出 60
+    }
+}
+    </code></pre>
+
+    <h2>3. 求素数 (Primes)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 判断是否是素数
+    public static boolean isPrime(int n) {
+        if (n <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int n = 29;
+        System.out.println(n + " 是否为素数: " + isPrime(n)); // 输出 true
+    }
+}
+    </code></pre>
+
+    <h2>4. 斐波那契数列 (Fibonacci)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 斐波那契数列
+    public static int fibonacci(int n) {
+        if (n <= 1) return n;
+        int a = 0, b = 1;
+        for (int i = 2; i <= n; i++) {
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        return b;
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println(n + " 位置的斐波那契数是: " + fibonacci(n)); // 输出 55
+    }
+}
+    </code></pre>
+
+    <h2>5. 快速排序 (Quick Sort)</h2>
+    <pre><code class="java">
+import java.util.Arrays;
+
+public class MathAlgorithms {
+    // 快速排序
+    public static void quickSort(int[] arr, int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high);
+            quickSort(arr, low, pi - 1);
+            quickSort(arr, pi + 1, high);
+        }
+    }
+
+    // 分割数组
+    private static int partition(int[] arr, int low, int high) {
+        int pivot = arr[high];
+        int i = (low - 1); // 最小元素的索引
+        for (int j = low; j < high; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                // 交换 arr[i] 和 arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        // 交换 arr[i + 1] 和 arr[high]
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        return i + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+        quickSort(arr, 0, arr.length - 1);
+        System.out.println("排序后的数组: " + Arrays.toString(arr)); // 输出 [1, 5, 7, 8, 9, 10]
+    }
+}
+    </code></pre>
+
+    <h2>6. 二分查找 (Binary Search)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 二分查找
+    public static int binarySearch(int[] arr, int target) {
+        int low = 0, high = arr.length - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (arr[mid] == target) {
+                return mid; // 找到目标
+            } else if (arr[mid] < target) {
+                low = mid + 1; // 向右半边查找
+            } else {
+                high = mid - 1; // 向左半边查找
+            }
+        }
+        return -1; // 未找到
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 7, 9, 11, 13, 15};
+        int target = 7;
+        int result = binarySearch(arr, target);
+        if (result != -1) {
+            System.out.println("目标 " + target + " 在数组中的索引位置是: " + result); // 输出 3
+        } else {
+            System.out.println("目标不在数组中");
+        }
+    }
+}
+    </code></pre>
+
+    <h2>7. 回文判断 (Palindrome Check)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 判断回文
+    public static boolean isPalindrome(String str) {
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false; // 不相等则不是回文
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String str = "madam";
+        System.out.println(str + " 是否是回文: " + isPalindrome(str)); // 输出 true
+    }
+}
+    </code></pre>
+
+    <h2>8. 阶乘 (Factorial)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 阶乘
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) return 1; // 基本情况
+        int result = 1;
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println(n + " 的阶乘是: " + factorial(n)); // 输出 120
+    }
+}
+    </code></pre>
+
+    <h2>9. 冒泡排序 (Bubble Sort)</h2>
+    <pre><code class="java">
+import java.util.Arrays;
+
+public class MathAlgorithms {
+    // 冒泡排序
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // 交换 arr[j] 和 arr[j + 1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        bubbleSort(arr);
+        System.out.println("排序后的数组: " + Arrays.toString(arr)); // 输出 [11, 12, 22, 25, 34, 64, 90]
+    }
+}
+    </code></pre>
+
+    <h2>10. 求平方根 (Square Root)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 使用牛顿迭代法求平方根
+    public static double sqrt(double n) {
+        double guess = n / 2;
+        double epsilon = 1e-6; // 精度要求
+        while (Math.abs(guess * guess - n) > epsilon) {
+            guess = (guess + n / guess) / 2;
+        }
+        return guess;
+    }
+
+    public static void main(String[] args) {
+        double n = 25;
+        System.out.println(n + " 的平方根是: " + sqrt(n)); // 输出 5.0
+    }
+}
+    </code></pre>
+
+    <h2>11. 快速幂算法 (Exponentiation by Squaring)</h2>
+    <pre><code class="java">
+public class MathAlgorithms {
+    // 快速幂算法
+    public static long power(long base, int exponent) {
+        long result = 1;
+        while (exponent > 0) {
+            if (exponent % 2 == 1) {
+                result *= base;
+            }
+            base *= base;
+            exponent /= 2;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        long base = 2;
+        int exponent = 10;
+        System.out.println(base + " 的 " + exponent + " 次方是: " + power(base, exponent)); // 输出 1024
+    }
+}
+    </code></pre>
+
+    <h2>12. 素数筛法 (Sieve of Eratosthenes)</h2>
+    <pre><code class="java">
+import java.util.Arrays;
+
+public class MathAlgorithms {
+    // 埃拉托斯特尼筛法
+    public static boolean[] sieveOfEratosthenes(int n) {
+        boolean[] isPrime = new boolean[n + 1];
+        Arrays.fill(isPrime, true);
+        isPrime[0] = isPrime[1] = false;
+        
+        for (int i = 2; i * i <= n; i++) {
+            if (isPrime[i]) {
+                for (int j = i * i; j <= n; j += i) {
+                    isPrime[j] = false;
+                }
+            }
+        }
+        return isPrime;
+    }
+
+    public static void main(String[] args) {
+        int n = 50;
+        boolean[] primes = sieveOfEratosthenes(n);
+        System.out.println("小于 " + n + " 的素数有：");
+        for (int i = 2; i <= n; i++) {
+            if (primes[i]) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+    </code></pre>
+
+    <h2>13. 两个圆是否重叠 (Two Circles Overlap)</h2>
+    <pre><code class="java">
+public class CircleOverlap {
+    // 判断两个圆是否重叠
+    public static boolean areCirclesOverlapping(double x1, double y1, double r1, double x2, double y2, double r2) {
+        // 计算两个圆心之间的距离
+        double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        
+        // 判断是否重叠
+        return distance < (r1 + r2);
+    }
+
+    public static void main(String[] args) {
+        double x1 = 0, y1 = 0, r1 = 5; // 第一个圆的圆心 (0,0)，半径 5
+        double x2 = 3, y2 = 4, r2 = 3; // 第二个圆的圆心 (3,4)，半径 3
+        
+        if (areCirclesOverlapping(x1, y1, r1, x2, y2, r2)) {
+            System.out.println("两个圆有重叠区域");
+        } else {
+            System.out.println("两个圆没有重叠区域");
+        }
+    }
+}
+    </code></pre>
+</section>

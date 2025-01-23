@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const chapter = getChapterById(chapterId);
 
+    if(chapter === null) {
+        document.body.innerHTML = "Article Not Found";
+        return;
+    }
+
     const chapterTitle = document.getElementById("chapter-title");
     const chapterInfo = document.getElementById("chapter-info");
     const HTMLTitle = document.querySelector("title");
@@ -112,5 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // MathJax 未加载，等待加载完成后渲染
             window.addEventListener('load', loadMathJaxAndRender);
         }
+        hljs.highlightAll();
     }, 200);
 });
